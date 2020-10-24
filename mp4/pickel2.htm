@@ -1,0 +1,54 @@
+<head>
+    <title>aeiou</title>
+</head>
+<body onload="javascript:a">
+    <style>
+        body{
+            animation: space 3s ease-in-out infinite;
+            animation-name: space;
+            background-color: space;
+        }
+        @keyframes space {
+          0%	{background-color:thistle;}
+          12%    {background-color:pink;}
+          25%   {background-color: violet;}
+          37%    {background-color:slateblue;}
+          50%	{background-color:purple;}
+          62%    {background-color:slateblue;}
+          75%   {background-color: violet;}
+          88%    {background-color:pink;}
+          100%	{background-color:thistle;}
+        }
+    </style>
+    <script>
+        window.onkeydown = function(e){
+            if((e.which || e.keycode) == 38){
+                setInterval(
+                    function weeee(){
+                        window.moveBy(0,-1)
+                },1);;
+            }
+            else if((e.which || e.keycode) == 39){
+                setInterval(
+                    function weeee(){
+                        window.moveBy(1,0)
+                },1);
+            }
+            else if((e.which || e.keycode) == 40){
+                setInterval(
+                    function weeee(){
+                        window.moveBy(0,1)
+                },1);
+            }
+            else if((e.which || e.keycode) == 37){
+                setInterval(
+                    function weeee(){
+                        window.moveBy(-1,0)
+                },1);;
+            };
+        };
+    </script>
+    <video autoplay loop>
+        <source src="moonrick.mp4" type="video/mp4">
+    </video>
+</body>

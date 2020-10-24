@@ -1,0 +1,468 @@
+<html>
+    <style>
+        body {
+          background-image: url("/client/img/quinnbg.png");
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+    </style>
+    <style>
+        img.render {height:32%; width:auto; border-radius: 25px 25px 25px 25px; -moz-border-radius: 25px 25px 25px 25px; -webkit-border-radius: 25px 25px 25px 25px; transition: transform .2s;}
+        img.render:hover{transform: scale(1.15);}
+        img.render1 {
+            height: 75%; 
+            width: auto; 
+            border-radius: 25px 25px 25px 25px; 
+            -moz-border-radius: 25px 25px 25px 25px; 
+            -webkit-border-radius: 25px 25px 25px 25px; 
+            transition: transform .25s; 
+            display: block; 
+            margin-left: auto;
+            margin-right: auto;}
+        img.render1:hover{transform: scale(1.15);}
+        img.lazy{
+            display: block;
+        }
+        .mainbox{
+            font-size: 24px;
+            color:rgba(255,128,255,1);
+            cursor: pointer;
+            transition: all .25s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .sidemenu{
+            transition: all .25s;
+            position:fixed;
+            top:0px;
+            left:0px;
+            height:100%;
+            width:0px;
+            background-color: rgba(255,196,255,0.5);
+            z-index: 1;
+            padding-top: 100px;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .sidemenu a{
+            transition: all .25s;
+            padding: 8px 8px 8px 64px;
+            text-decoration: none;
+            font-size: 40px;
+            color:burlywood;
+            display: block;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .sidemenu a:hover{
+            transition: all .25s;
+            color:white;
+            background-color: rgba(255,196,255,0.5);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .sidemenu .closebtn{
+            transition: all .25s;
+            position: absolute;
+            top: 0px;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 32px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+    <script type="text/javascript">
+        function openFunction(){
+            document.getElementById("menu").style.width="20%";
+            document.getElementById("menubox").style.marginLeft="20%";
+            document.getElementById("box").style.color="rgba(255,128,255,1)"
+        }
+        function closeFunction(){
+            document.getElementById("menu").style.width="0px";
+            document.getElementById("menubox").style.marginLeft="0px";
+            document.getElementById("box").style.color="rgba(0,0,0,0)"
+        }
+    </script>
+    <head>
+        <title>Renders - CuteSkyler</title>
+        <link rel="icon" href="/client/img/quinnbutt.gif">
+    </head>
+    <div id="box" class="mainbox" onclick="openFunction()">&#9776;</div>
+    <div id="menu" class="sidemenu">
+        <a href="/client/webpages/renders.html"><b>Renders</b></a>
+        <a href="/client/webpages/drawings.html"><b>Drawings</b></a>
+        <a href="/client/webpages/full_videos.html"><b>Full videos</b></a>
+        <div href="#">&nbsp;</div>
+        <div href="#">&nbsp;</div>
+        <a href="/client"><b>Home Page</b></a>
+        <a href="/client/webpages/quinnbot.html"><b>QuinnBot</b></a>
+        <div href="#">&nbsp;</div>
+        <div href="#">&nbsp;</div>
+        <a href="/client/webpages/spooked.html"><img src="/client/img/fuckyeah.gif" width="40%"></img></a>
+        <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+    </div>
+    <script src="script10.js"></script>
+    <link rel="stylesheet" href="script01.css">
+    <img src="/client/img/ftd.png" width="100%"></img>
+<div>&nbsp;</div>
+<div class="slideshow-container">
+    <div class="mySlides fade" id="slide">
+        <img src="images/spacer.gif" id="myPicture1" alt="some image" class="render1" style="height: 64%; margin: center;">
+    </div>
+    <div class="mySlides fade" id="slide">
+        <img src="images/spacer.gif" id="myPicture2" alt="some image" class="render1" style="height: 64%;  margin: center;">
+    </div>
+    <div class="mySlides fade" id="slide">
+        <img src="images/spacer.gif" id="myPicture3" alt="some image" class="render1" style="height: 64%;  margin: center;">
+    </div>
+    <div class="mySlides fade" id="slide">
+        <img src="images/spacer.gif" id="myPicture4" alt="some image" class="render1" style="height: 64%;  margin: center;">
+    </div>
+    <div class="mySlides fade" id="slide">
+        <img src="images/spacer.gif" id="myPicture5" alt="some image" class="render1" style="height: 64%;  margin: center;">
+    </div>
+    <div class="mySlides fade" id="slide">
+        <img src="images/spacer.gif" id="myPicture6" alt="some image" class="render1" style="height: 64%; margin: center;">
+    </div>
+    <div class="mySlides fade" id="slide">
+        <img src="images/spacer.gif" id="myPicture7" alt="some image" class="render1" style="height: 64%;  margin: center;">
+    </div>
+    <div class="mySlides fade" id="slide">
+        <img src="images/spacer.gif" id="myPicture8" alt="some image" class="render1" style="height: 64%;  margin: center;">
+    </div>
+    <div class="mySlides fade" id="slide">
+        <img src="images/spacer.gif" id="myPicture9" alt="some image" class="render1" style="height: 64%;  margin: center;">
+    </div>
+    <div class="mySlides fade" id="slide">
+        <img src="images/spacer.gif" id="myPicture10" alt="some image" class="render1" style="height: 64%;  margin: center;">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <script>
+    window.onload = choosePic;
+    var myPix = new Array(
+        "https://cdn.discordapp.com/attachments/733067931612872735/759861812396163092/IMG_20200927_213901_893.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/759503305977757746/IMG_20200926_215431_869.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/745412912650387516/IMG_20200819_002309_212.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/744303621713428510/tzrBCfPLsz2SB6US.gif",
+        "https://cdn.discordapp.com/attachments/556796995088547851/743967887844180118/ezgif-5-e4b415b0f2f9.gif",
+        "https://cdn.discordapp.com/attachments/556796995088547851/743886553167823019/rjqrP8lZ55KNuO8y.gif",
+        "https://cdn.discordapp.com/attachments/556796995088547851/743886549279703071/1Kt0c51gbi7gts1X.gif",
+        "https://cdn.discordapp.com/attachments/556796995088547851/743886543646883920/glvdgaTEgMnj0HOz.gif",
+        "https://cdn.discordapp.com/attachments/556796995088547851/725862705574969344/IMG_20200626_015346_633.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/722944812831080508/IMG_20200618_004354_701.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/722557803184783391/IMG_20200616_230327_144.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/722238368003653752/IMG_20200616_013414_358.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/720752780771590245/IMG_20200611_222254.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/711864669861576734/QuinnBoobjob4.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/711343777318436965/QuinnLaying.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/711333689895682058/QuinnLingerie.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/711316682970234911/JaidenCock.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/710572417642267075/HBq.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/700727496588656750/IMG_20200417_161536_687.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/694351799238524968/IMG_20200328_171542_028.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/693203740836102254/IMG_20200327_215500.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/690335593988620328/IMG_20200317_234514_697.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/690335593254879846/IMG_20200320_000546_112.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/688508856330223674/IMG_20200311_153906_501.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/688508710347079708/IMG_20200311_231317_714.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/688508632417042433/IMG_20200313_162335_318.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/688508337654071375/IMG_20200314_225956_390.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/686721684992294974/IMG_20200310_001321_434.jpg",
+        "https://pbs.twimg.com/media/ERKFc_cW4AEovZt.jpg",
+        "https://pbs.twimg.com/media/ERKFDvbXYAQK2B8.jpg",
+        "https://pbs.twimg.com/media/EQxc9QBXYAAW2W2.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/678026387394789421/IMG_20200209_190810.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/678026386669043738/IMG_20200213_222514.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/675226679379099661/IMG_20200207_000655_876.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/674382695626833973/IMG_20200204_230141.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/674138042583220274/IMG_20200203_230839.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/673293568114425856/IMG_20200201_231909_580.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/672534568657747988/IMG_20200130_210408.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/663173546570285065/IMG_20200105_010935.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/662462872793776142/IMG_20200103_014829.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/661609778119835668/IMG_20191231_164231.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/653738896475291658/IMG_20191210_002105.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/650841063161856031/IMG_20191201_203318.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/650841062419595284/IMG_20191201_214355.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/650841061866078218/IMG_20191201_234954.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/650428647798472748/IMG_20191130_210847.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/650090841767018537/IMG_20191129_224238.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/649343289866190863/IMG_20191127_211705.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/639576155409743902/IMG_20191031_222558.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/637005879446732801/unknown.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/635171336934785031/doggy.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/635171332035706921/doggycum.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/633754115322806298/milfk.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/633005085592387692/unknown.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/631974441965846539/unknown.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/630876279146807306/boobjob.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/626524798029266944/Taylor.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/620365461623930880/succ.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/619995753502343199/wotar.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/614204402688983042/fullresdrawing1.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/611994118129844225/halfresdrawing.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/601756546774466590/unknown.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/592459539195101215/unknown.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/591363451759099908/unknown.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/588468555670880428/Cutieeeeee.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/587193832186314753/butt.png",
+        "https://cdn.discordapp.com/attachments/556796995088547851/586699623041728512/Sporty.jpg",
+        "https://cdn.discordapp.com/attachments/556796995088547851/586206011220819976/unknown.png"
+    );
+
+    function choosePic() {
+        var randomNum = Math.floor(Math.random() * myPix.length);
+        var randomNum2 = Math.floor(Math.random() * myPix.length);
+        var randomNum3 = Math.floor(Math.random() * myPix.length);
+        var randomNum4 = Math.floor(Math.random() * myPix.length);
+        var randomNum5 = Math.floor(Math.random() * myPix.length);
+        var randomNum6 = Math.floor(Math.random() * myPix.length);
+        var randomNum7 = Math.floor(Math.random() * myPix.length);
+        var randomNum8 = Math.floor(Math.random() * myPix.length);
+        var randomNum9 = Math.floor(Math.random() * myPix.length);
+        var randomNum10 = Math.floor(Math.random() * myPix.length);
+        document.getElementById("myPicture1").src = myPix[randomNum];
+        document.getElementById("myPicture2").src = myPix[randomNum2];
+        document.getElementById("myPicture3").src = myPix[randomNum3];
+        document.getElementById("myPicture4").src = myPix[randomNum4];
+        document.getElementById("myPicture5").src = myPix[randomNum5];
+        document.getElementById("myPicture6").src = myPix[randomNum6];
+        document.getElementById("myPicture7").src = myPix[randomNum7];
+        document.getElementById("myPicture8").src = myPix[randomNum8];
+        document.getElementById("myPicture9").src = myPix[randomNum9];
+        document.getElementById("myPicture10").src = myPix[randomNum10];
+    }
+</script>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+    <span class="dot" onclick="currentSlide(10)"></span>
+  </div> 
+    <div>
+        <a class="render"><img class="render" src="https://cdn.discordapp.com/attachments/733067931612872735/759861812396163092/IMG_20200927_213901_893.jpg"></img></a>
+        <a class="render"><img class="render" src="https://cdn.discordapp.com/attachments/556796995088547851/759503305977757746/IMG_20200926_215431_869.jpg"></img></a>
+        <a class="render"><img class="render" src="https://cdn.discordapp.com/attachments/556796995088547851/745412912650387516/IMG_20200819_002309_212.jpg"></img></a>
+        <a class="render"><img class="render" src="https://cdn.discordapp.com/attachments/556796995088547851/744303621713428510/tzrBCfPLsz2SB6US.gif"></img></a>
+        <a class="render"><img class="render" src="https://cdn.discordapp.com/attachments/556796995088547851/743967887844180118/ezgif-5-e4b415b0f2f9.gif"></img></a>
+        <a class="render"><img class="render" src="https://cdn.discordapp.com/attachments/556796995088547851/743886553167823019/rjqrP8lZ55KNuO8y.gif"></img></a>
+        <a class="render"><img class="render" src="https://cdn.discordapp.com/attachments/556796995088547851/743886549279703071/1Kt0c51gbi7gts1X.gif"></img></a>
+        <a class="render"><img class="render" src="https://cdn.discordapp.com/attachments/556796995088547851/743886543646883920/glvdgaTEgMnj0HOz.gif"></img></a>
+        <a class="render"><img class="render" src="https://cdn.discordapp.com/attachments/556796995088547851/725862705574969344/IMG_20200626_015346_633.jpg"></img></a>
+        <a class="render"><img class="render" src="https://cdn.discordapp.com/attachments/556796995088547851/722944812831080508/IMG_20200618_004354_701.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/722557803184783391/IMG_20200616_230327_144.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/722238368003653752/IMG_20200616_013414_358.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/720752780771590245/IMG_20200611_222254.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/711864669861576734/QuinnBoobjob4.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/711343777318436965/QuinnLaying.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/711333689895682058/QuinnLingerie.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/711316682970234911/JaidenCock.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/710572417642267075/HBq.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/700727496588656750/IMG_20200417_161536_687.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/694351799238524968/IMG_20200328_171542_028.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/693203740836102254/IMG_20200327_215500.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/690335593988620328/IMG_20200317_234514_697.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/690335593254879846/IMG_20200320_000546_112.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/688508856330223674/IMG_20200311_153906_501.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/688508710347079708/IMG_20200311_231317_714.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/688508632417042433/IMG_20200313_162335_318.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/688508337654071375/IMG_20200314_225956_390.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/686721684992294974/IMG_20200310_001321_434.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://pbs.twimg.com/media/ERKFc_cW4AEovZt.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://pbs.twimg.com/media/ERKFDvbXYAQK2B8.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://pbs.twimg.com/media/EQxc9QBXYAAW2W2.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/678026387394789421/IMG_20200209_190810.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/678026386669043738/IMG_20200213_222514.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/675226679379099661/IMG_20200207_000655_876.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/674382695626833973/IMG_20200204_230141.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/674138042583220274/IMG_20200203_230839.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/673293568114425856/IMG_20200201_231909_580.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/672534568657747988/IMG_20200130_210408.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/663173546570285065/IMG_20200105_010935.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/662462872793776142/IMG_20200103_014829.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/661609778119835668/IMG_20191231_164231.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/653738896475291658/IMG_20191210_002105.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/650841063161856031/IMG_20191201_203318.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/650841062419595284/IMG_20191201_214355.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/650841061866078218/IMG_20191201_234954.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/650428647798472748/IMG_20191130_210847.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/650090841767018537/IMG_20191129_224238.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/649343289866190863/IMG_20191127_211705.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/639576155409743902/IMG_20191031_222558.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/637005879446732801/unknown.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/635171336934785031/doggy.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/635171332035706921/doggycum.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/633754115322806298/milfk.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/633005085592387692/unknown.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/631974441965846539/unknown.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/630876279146807306/boobjob.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/626524798029266944/Taylor.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/620365461623930880/succ.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/619995753502343199/wotar.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/614204402688983042/fullresdrawing1.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/611994118129844225/halfresdrawing.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/601756546774466590/unknown.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/592459539195101215/unknown.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/591363451759099908/unknown.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/588468555670880428/Cutieeeeee.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/587193832186314753/butt.png"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/586699623041728512/Sporty.jpg"></img></a>
+        <a class="render"><img class="lazy" data-src="https://cdn.discordapp.com/attachments/556796995088547851/586206011220819976/unknown.png"></img></a>
+    </div>
+    <style>
+        * {box-sizing:border-box}
+        slideshow-container {
+            max-width:40%;
+            height:auto;
+            position: relative;
+            margin: auto;
+            border-radius: 25px 25px 25px 25px; 
+            -moz-border-radius: 25px 25px 25px 25px; 
+            -webkit-border-radius: 25px 25px 25px 25px; 
+            transition: transform .25s; 
+            display: block; 
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .mySlides {
+              border-radius: 25px 25px 25px 25px; 
+              -moz-border-radius: 25px 25px 25px 25px; 
+              -webkit-border-radius: 25px 25px 25px 25px; 
+              transition: transform .25s; 
+              display: block; 
+              margin-left: auto;
+              margin-right: auto;
+            display: none;
+          }
+          .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+          }
+          .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+          }
+          .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+          }
+          .text {
+            color: #000000;
+            outline: white 2px;
+            font-size: 15px;
+            padding: 8px 12px;
+           position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          }
+          .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+          }
+          .active, .dot:hover {
+            background-color: #717171;
+          }
+          .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+          }
+  
+          @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+          }
+  
+          @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+          }
+  </style>
+    <script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyloadImages = document.querySelectorAll("img.lazy");    
+            var lazyloadThrottleTimeout;
+            
+            function lazyload () {
+              if(lazyloadThrottleTimeout) {
+                clearTimeout(lazyloadThrottleTimeout);
+              }    
+              
+              lazyloadThrottleTimeout = setTimeout(function() {
+                  var scrollTop = window.pageYOffset;
+                  lazyloadImages.forEach(function(img) {
+                      if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        img.classList.add('render');
+                      }
+                  });
+                  if(lazyloadImages.length == 0) { 
+                    document.removeEventListener("scroll", lazyload);
+                    window.removeEventListener("resize", lazyload);
+                    window.removeEventListener("orientationChange", lazyload);
+                  }
+              }, 20);
+            }
+            
+            document.addEventListener("scroll", lazyload);
+            window.addEventListener("resize", lazyload);
+            window.addEventListener("orientationChange", lazyload);
+          });
+    </script>
+</body>
+</html>

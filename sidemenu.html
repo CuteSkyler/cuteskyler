@@ -1,0 +1,74 @@
+<div id="box" class="mainbox" onclick="openFunction()">&#9776;</div>
+    <div id="menu" class="sidemenu">
+            <a href="/client/webpages/renders.html"><b>Renders</b></a>
+            <a href="/client/webpages/drawings.html"><b>Drawings</b></a>
+            <a href="/client/webpages/full_videos.html"><b>Full videos</b></a>
+            <a href="/client/webpages/games.html"><b>Games</b></a>
+            <div href="#">&nbsp;</div>
+            <div href="#">&nbsp;</div>
+            <a href="/client"><b>Home Page</b></a>
+            <a href="/client/webpages/quinnbot.html"><b>QuinnBot</b></a>
+            <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+            <div href="#">&nbsp;</div>
+            <div href="#">&nbsp;</div>
+            <a href="/client/webpages/spooked.html"><img src="/client/img/fuckyeah.gif" width="40%"></img></a>
+        </div>
+        <script type="text/javascript">
+            function openFunction(){
+                document.getElementById("menu").style.width="20%";
+                document.getElementById("menubox").style.marginLeft="20%";
+                document.getElementById("box").style.color="rgba(255,128,255,1)"
+            }
+            function closeFunction(){
+                document.getElementById("menu").style.width="0px";
+                document.getElementById("menubox").style.marginLeft="0px";
+                document.getElementById("box").style.color="rgba(0,0,0,0)"
+            }
+        </script>
+
+<style>
+    .mainbox{
+            font-size: 24px;
+            color:rgba(255,128,255,1);
+            cursor: pointer;
+            transition: all .25s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .sidemenu{
+            transition: all .25s;
+            position:fixed;
+            top:0px;
+            left:0px;
+            height:100%;
+            width:0px;
+            background-color: rgba(255,196,255,0.5);
+            z-index: 1;
+            padding-top: 100px;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .sidemenu a{
+            transition: all .25s;
+            padding: 8px 8px 8px 64px;
+            text-decoration: none;
+            font-size: 40px;
+            color:burlywood;
+            display: block;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .sidemenu a:hover{
+            transition: all .25s;
+            color:white;
+            background-color: rgba(255,196,255,0.5);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .sidemenu .closebtn{
+            transition: all .25s;
+            position: absolute;
+            top: 0px;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 32px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+</style>
