@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title>Foxy the Body Builder</title>
+        <link rel="icon" href="img/favicon.png"> 
+    </head>
+    <body>
+        <style>
+            @import url("stylesheet.css");
+        </style>
+        <aside class="foxname">
+            <p class="FoxyName1">&nbsp;&nbsp;&nbsp;Nickname for Foxy:</p>
+            <p class="FoxyName" id="FoxyName">Foxy</p>
+            <form>
+                <input type="text" class="nicknameinput" id="nicknameinput" name="nicknameinput" placeholder="Foxy">
+            </form>
+        </aside>
+        <foo hidden class="value" id="MUSCLEvalue">1</foo>
+        <foo hidden class="value" id="ENGERYvalue">100</foo>
+        <foo hidden class="value" id="MONEYvalue">0</foo>
+        <foo hidden class="value" id="LOCvalue">0</foo>
+        <foo hidden class="value" id="INTELvalue">0</foo>
+        <foo hidden class="value" id="COMPEvalue">0</foo>
+        <foo hidden class="value" id="DateValue">1</foo>
+        <foo hidden class="value" id="WeatherInt">1</foo>
+        <foo hidden class="value" id="DrugsValue">1</foo>
+        <foo hidden class="value" id="WeatherValue">sunny day today. A perfect day to go outside!</foo>
+        <a id="foxyclick" class="foxyclick" onclick="foxyStats()">
+            <img id="foxystatus"  class="foxystatus" src="img/foxy/stage1.png">
+        </a>
+        <a style="overflow: hidden;" id="placeclick" class="placeclick">
+            <img class="place" id="place" src="img/places/room.png">
+        </a>
+        <a>
+            <p class="textprompt" id="textpromptS1" style="visibility: visible; background-color: rgba(255,255,255,0.6); margin-top: 42%; width: 10%; border-radius: 5px">Height: 1.7m</p>
+            <p class="textprompt" id="textpromptS2" style="visibility: visible; background-color: rgba(255,255,255,0.6); margin-top: 42%; width: 10%; margin-left: 27.5%; border-radius: 5px">Weight: 55kg</p>
+            <p class="textprompt" id="textpromptS3" style="visibility: visible; background-color: rgba(255,255,255,0.6); margin-top: 42%; width: 10%; margin-left: 38%; border-radius: 5px">Energy: 100%</p>
+            <p class="textprompt" id="textpromptS4" style="visibility: visible; background-color: rgba(255,255,255,0.6); margin-top: 42%; width: 10%; margin-left: 48.5%; border-radius: 5px">Cup Size: Double D</p>
+            <p class="textprompt" id="textpromptp1" style="visibility: hidden;"></p>
+            <p class="textprompt" id="textprompt" style="visibility: visible;"></p>
+            <a class="textprompt" id="textpromptb" style="visibility: hidden; margin-top: 0%;" onclick="locChange(0)">
+                <p class="textprompt" id="textpromptb1" style="visibility: hidden;">&nbsp;&nbsp;&nbsp;Go Back</p>
+            </a>
+            <a class="textprompt" id="textpromptb2" style="visibility: hidden; margin-top: 0%;" onclick="locChange(0)">
+                <p class="textprompt" id="textpromptb3" style="visibility: hidden;">&nbsp;&nbsp;&nbsp;Go Back</p>
+            </a>
+        </a>
+        <aside id="selections" style="width: 21%;">
+            <a id="gymO" onclick="locChange(1)">
+                <p class="text" id="gym1">Go to the gym</p>
+            </a>
+            <a id="storeO" onclick="locChange(2)">
+                <p class="text" id="store1">Go to the store</p>
+            </a>
+            <a id="schoolO" onclick="locChange(4)">
+                <p class="text" id="school1">Go to school</p>
+            </a>
+            <a id="streamO" onclick="locChange(3)">
+                <p class="text" id="stream1">Go to your computer</p>
+            </a>
+            <a id="compete0" onclick="locChange(5)">
+                <p class="text" id="compete1">Compete in a contest</p>
+            </a>
+            <a id="sleep0" onclick="sleep(1)">
+                <p class="text" id="sleep1">Sleep for the day</p>
+            </a>
+        </aside>
+        <aside hidden id="gymSelect">
+            <p class="gymParagraph"><b>&nbsp;&nbsp;&nbsp;Welcome to the Gym!</b></p>
+            <p class="gymParagraph" style="margin-top: 0%;">&nbsp;&nbsp;&nbsp;You can work out or purchase gym equipment here</p>
+            <section>
+                <a id="gym" onclick="showGymSlection(1)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go to the pills section</p></a>
+                <a id="gym" onclick="showGymSlection(2)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go to the gym equipment section</p></a>
+                <a id="gym" onclick="showGymSlection(3)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go to the boxing ring</p></a>
+                <a id="gym" onclick="showGymSlection(4)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Work out</p></a>
+                <a id="gym" onclick="locChange(0)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go Back</p></a>
+            </section>
+        </aside>
+        <aside hidden id="storeSelect">
+            <p class="storeParagraph"><b>&nbsp;&nbsp;&nbsp;Welcome to the store!</b></p>
+            <p class="storeParagraph" style="margin-top: 0%;">&nbsp;&nbsp;&nbsp;You can purchase books, food, and other ordinary supplies</p>
+            <section>
+                <a id="store" onclick="showStoreSelection(1)"><p class="storePurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go to Read 'N' Write</p></a>
+                <a id="store" onclick="showStoreSelection(2)"><p class="storePurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go to Chess</p></a>
+                <a id="store" onclick="showStoreSelection(3)"><p class="storePurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go to Jimbo</p></a>
+                <a id="store" onclick="showStoreSelection(4)"><p class="storePurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Walk around</p></a>
+                <a id="store" onclick="locChange(0)"><p class="storePurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go Back</p></a>
+            </section>
+        </aside>
+        <aside hidden id="schoolSelect">
+            <p class="schoolParagraph"><b>&nbsp;&nbsp;&nbsp;Welcome to school!</b></p>
+            <p class="schoolParagraph" style="margin-top: 0%;">&nbsp;&nbsp;&nbsp;Here you can improve your intelligence</p>
+            <section>
+                <a id="school"><p class="schoolPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Study Maths</p></a>
+                <a id="school"><p class="schoolPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Study Physics</p></a>
+                <a id="school"><p class="schoolPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Study Science</p></a>
+                <a id="school"><p class="schoolPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Study Biology</p></a>
+                <a id="school" onclick="locChange(0)"><p class="schoolPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go Back</p></a>
+            </section>
+        </aside>
+        <aside hidden id="streamSelect">
+            <p class="streamParagraph"><b>&nbsp;&nbsp;&nbsp;You're behind your computer</b></p>
+            <p class="streamParagraph" style="margin-top: 0%;">&nbsp;&nbsp;&nbsp;Stream, post imagery or go onto the internet</p>
+            <section>
+                <a id="stream" onclick="showStreamSelection(1)"><p class="streamPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Search the web</p></a>
+                <a id="stream" onclick="showStreamSelection(2)"><p class="streamPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Post onto DeviousCraft</p></a>
+                <a id="stream" onclick="showStreamSelection(3)"><p class="streamPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go live onto Twatturbate</p></a>
+                <a id="stream" onclick="locChange(0)"><p class="streamPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go Back</p></a>
+            </section>
+        </aside>
+        <aside hidden id="contestSelect">
+            <p class="contestParagraph"><b>&nbsp;&nbsp;&nbsp;Welcome to the weekly FBB contest!</b></p>
+            <p class="contestParagraph" style="margin-top: 0%;">&nbsp;&nbsp;&nbsp;Today's the day! Are you the strongest around here?</p>
+            <section>
+                <a id="contest"><p class="contestPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Let's do it</p></a>
+                <a id="contest" onclick="locChange(0)"><p class="contestPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go Back</p></a>
+            </section>
+        </aside>
+        
+
+
+        <!--Gym Selections-->
+        <aside hidden id="gymSelectPills">
+            <p class="gymParagraph"><b>&nbsp;&nbsp;&nbsp;Pills and supplements section</b></p>
+            <p class="gymParagraph" style="margin-top: 0%;">&nbsp;&nbsp;&nbsp;"Got some rare things on sale, stranger!"</p>
+            <section>
+                <a id="gym01"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Steroids $100</p></a>
+                <a id="gym11"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Grow+++ $200</p></a>
+                <a id="gym21"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;!Muscle Mass¡ $400</p></a>
+                <a id="gym" onclick="locChange(1)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go Back</p></a>
+            </section>
+        </aside>
+        <aside hidden id="gymSelectEquipment">
+            <p class="gymParagraph"><b>&nbsp;&nbsp;&nbsp;Equipment section</b></p>
+            <p class="gymParagraph" style="margin-top: 0%;">&nbsp;&nbsp;&nbsp;"Got some rare things on sale, stranger!"</p>
+            <section>
+                <a id="gym02"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Dumbells $100</p></a>
+                <a id="gym12"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Workout Bech $400</p></a>
+                <a id="gym22"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Pull-up bar $250</p></a>
+                <a id="gym32"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Battle Rope $600</p></a>
+                <a id="gym" onclick="locChange(1)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go Back</p></a>
+            </section>
+        </aside>
+        <aside hidden id="gymSelectBoxing">
+            <p class="gymParagraph"><b>&nbsp;&nbsp;&nbsp;Boxing section</b></p>
+            <p class="gymParagraph" style="margin-top: 0%;">&nbsp;&nbsp;&nbsp;"Not only will you need cash, but you'll need GUTS to buy that weapon!"</p>
+            <section>
+                <a id="gym03"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Fight a novice</p></a>
+                <a id="gym13"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Fight an experienced fighter</p></a>
+                <a id="gym23"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Fight a professional boxer</p></a>
+                <a id="gym33"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Fight the strongest person in the building</p></a>
+                <a id="gym" onclick="locChange(1)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go Back</p></a>
+            </section>
+        </aside>
+        <aside hidden id="gymSelectWorkOut">
+            <p class="gymParagraph"><b>&nbsp;&nbsp;&nbsp;Workout section</b></p>
+            <p class="gymParagraph" style="margin-top: 0%;"></p>
+            <section>
+                <a id="gym04" onclick="onWorkoutTread(15)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go onto the treadmill</p></a>
+                <a id="gym14" onclick="onWorkoutYoga(5)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go do yoga</p></a>
+                <a id="gym24" onclick="onWorkoutBench(25)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go benchpress</p></a>
+                <a id="gym34" onclick="onWorkoutPU(20)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go do push ups</p></a>
+                <a id="gym" onclick="locChange(1)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go Back</p></a>
+            </section>
+        </aside>
+
+
+
+        <!--Store Selections-->
+        <aside hidden id="storeSelectBook">
+            <p class="gymParagraph"><b>&nbsp;&nbsp;&nbsp;Read 'n' Write - Bookshop</b></p>
+            <p class="gymParagraph" style="margin-top: 0%;">&nbsp;&nbsp;&nbsp;Knowledge is power</p>
+            <section>
+                <a id="gym01"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Encylopedia $100</p></a>
+                <a id="gym11"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Anatomy for Novices $150</p></a>
+                <a id="gym21"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Fitness at Home $50</p></a>
+                <a id="gym21"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Skyler Quinn's Yoga $75</p></a>
+                <a id="gym21"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Electonic Basics $200</p></a>
+                <a id="gym21"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;bINAS $400</p></a>
+                <a id="gym" onclick="locChange(2)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go Back</p></a>
+            </section>
+        </aside>
+        <aside hidden id="storeSelectFF">
+            <p class="gymParagraph"><b>&nbsp;&nbsp;&nbsp;Chess - Fast Food</b></p>
+            <p class="gymParagraph" style="margin-top: 0%;">&nbsp;&nbsp;&nbsp;Fuck MacDlanod and DFC. Chess is where it's at.</p>
+            <section>
+                <a id="gym02"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Chicken Strips $10</p></a>
+                <a id="gym12"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Pepperoni Pizza $20</p></a>
+                <a id="gym22"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Bread Sticks $5</p></a>
+                <a id="gym32"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Potato Crisps $1</p></a>
+                <a id="gym" onclick="locChange(2)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go Back</p></a>
+            </section>
+        </aside>
+        <aside hidden id="storeSelectMarket">
+            <p class="gymParagraph"><b>&nbsp;&nbsp;&nbsp;Jimbo - Super Market</b></p>
+            <p class="gymParagraph" style="margin-top: 0%;">&nbsp;&nbsp;&nbsp;Your average super market, with average, stupidly-high prices</p>
+            <section>
+                <a id="gym03"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Purchase Protein Powder $100</p></a>
+                <a id="gym13"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Purchase Meat $100</p></a>
+                <a id="gym23"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Purchase Veggies $100</p></a>
+                <a id="gym33"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Purchase Cookie-Coola $50</p></a>
+                <a id="gym" onclick="locChange(2)"><p class="gymPurchase" style="margin-top: -2%; margin-left: -40%;">&nbsp;&nbsp;&nbsp;Go Back</p></a>
+            </section>
+        </aside>
+    </body>
+    <script src="scriptsheet.js"></script>
+</html>
