@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+
+body{
+    background-color: rgba(0,0,0,1);
+    padding:0;
+    margin:0;
+    float: left;
+    z-index: -1;
+}
+
+div.bg{
+    width: 100vw;
+    height: 100vh;
+    padding:0;
+    margin:0;
+    float: left;
+    z-index: 0;
+}
+
+img.bgimg{
+    filter: blur(10px) grayscale();
+    position: relative;
+    width: 99.5vw;
+    height: 99.5vh;
+    padding:0;
+    margin:0;
+    z-index: 0;
+}
+
+a.comminfo{
+    position: fixed;
+    width: 80vw;
+    height: calc(80vw*(9/16));
+    padding: 0;
+    margin: 0;
+    z-index: 3;
+    float: left;
+    margin-left: 4.5vw;
+    margin-top: calc(2vw*(9/16));
+    transition: ease-in-out;
+    transform: scale(1);
+    animation: hi 0.5s ;
+}
+
+@keyframes hi {
+    0% {transform: scale(0)};
+    100% {transform: scale(1)};
+}
+
+img.comminfo{
+    filter: drop-shadow(-10px 10px 10px rgba(0,0,0,0.5));
+    border-radius: 15px;
+    padding: inherit;
+    margin: inherit;
+    z-index: inherit;
+    width: inherit;
+    height: inherit;
+    position: inherit;
+    transform: scale(1);
+    transition: ease-in-out 0.5s;
+}
+
+img.comminfo:hover{
+    transform: scale(1.05);
+}

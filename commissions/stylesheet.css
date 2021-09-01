@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+
+body{
+    background-color: rgba(0,0,0,1);
+    padding:0;
+    margin:0;
+    float: left;
+    z-index: -1;
+}
+
+div.bg{
+    width: 100vw;
+    height: 100vh;
+    padding:0;
+    margin:0;
+    float: left;
+    z-index: 0;
+}
+
+img.bgimg{
+    filter: blur(10px) grayscale();
+    position: relative;
+    width: 99.5vw;
+    height: 99.5vh;
+    padding:0;
+    margin:0;
+    z-index: 0;
+}
+
+a.comminfo{
+    position: fixed;
+    width: 50vw;
+    height: calc(50vw*(9/16));
+    padding:0;
+    margin:0;
+    z-index: 3;
+    float: left;
+    margin-left: 1vw;
+    margin-top: calc(1vw*(9/16));;
+}
+
+img.comminfo{
+    filter: drop-shadow(-10px 10px 10px rgba(0,0,0,0.5));
+    border-radius: 15px;
+    padding: inherit;
+    margin: inherit;
+    z-index: inherit;
+    width: inherit;
+    height: inherit;
+    position: inherit;
+}
+
+a.text{
+    position: fixed;
+    margin-left: 1px;
+    z-index: 6;
+}
+
+p.c1{
+    margin-top: 2vh;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 8vh;
+    position: relative;
+}
+
+
+/* INDEX 2 HTML */
+
+div.section1{
+    position: absolute;
+    z-index: 3;
+    height: 50vh;
+    width: 100vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale();
+    transition: ease-in-out 0.25s;
+}
+div.section2{
+    margin-top: 50vh;
+    position: absolute;
+    z-index: 6;
+    height: 50vh;
+    width: 33.33333vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale();
+    transition: ease-in-out 0.25s;
+}
+div.section3{
+    margin-left: 33.33333vw;
+    margin-top: 50vh;
+    position: absolute;
+    z-index: 6;
+    height: 50vh;
+    width: 33.33333vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale();
+    transition: ease-in-out 0.25s;
+}
+div.section4{
+    margin-left: 66.66666vw;
+    margin-top: 50vh;
+    position: absolute;
+    z-index: 6;
+    height: 50vh;
+    width: 33.33333vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale();
+    transition: ease-in-out 0.25s;
+}
+
+a.mid{
+    background-image: url("./img/uno.png");
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+a.mid2{
+    background-image: url("./img/dos.png");
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+a.mid3{
+    background-image: url("./img/tres.png");
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+a.mid4{
+    background-image: url("./img/quatro.png");
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+
+div.section1:hover{
+    filter: blur(0px) grayscale(0%);
+}
+div.section2:hover{
+    filter: blur(0px) grayscale(0%);
+}
+div.section3:hover{
+    filter: blur(0px) grayscale(0%);
+}
+div.section4:hover{
+    filter: blur(0px) grayscale(0%);
+}
+
+p.mid{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12vh;
+    z-index: inherit;
+    height: inherit;
+    text-align: center;
+    vertical-align: middle;
+    width: inherit; 
+    position: fixed;
+}
+p.midB{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 9vh;
+    z-index: inherit;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    height: 8vh;
+    width: 33.33333vw;
+}

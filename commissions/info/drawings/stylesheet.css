@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+
+body{
+    background-color: rgba(0,0,0,1);
+    padding:0;
+    margin:0;
+    float: left;
+    z-index: -1;
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+}
+
+div.bg{
+    width: 100vw;
+    height: 100vh;
+    padding:0;
+    margin:0;
+    float: left;
+    z-index: 0;
+}
+
+img.bgimg{
+    filter: blur(10px) grayscale();
+    position: relative;
+    width: 99.5vw;
+    height: 99.5vh;
+    padding:0;
+    margin:0;
+    z-index: 0;
+}
+
+
+
+/* Sections */
+
+div.sectionA{
+    position: absolute;
+    z-index: 3;
+    height: 20vw;
+    width: 25vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale(100%);
+    transition: ease-in-out 0.25s;
+}
+div.sectionA:hover{
+    filter: blur(0px) grayscale(0%);
+    transition: ease-in-out 0.25s;
+}
+a.midA{
+    background-image: url("https://cdn.discordapp.com/attachments/556796995088547851/880213357716705320/20210825_232016.jpg");
+    background-size: cover;
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+
+div.sectionB{
+    margin-left: 25vw;
+    position: absolute;
+    z-index: 3;
+    height: 22vw;
+    width: 25vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale(100%);
+    transition: ease-in-out 0.25s;
+}
+div.sectionB:hover{
+    filter: blur(0px) grayscale(0%);
+    transition: ease-in-out 0.25s;
+}
+a.midB{
+    background-image: url("https://cdn.discordapp.com/attachments/556796995088547851/879786022874001468/20210824_190702.png");
+    background-size: cover;
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+
+div.sectionC{
+    margin-left: 50vw;
+    position: absolute;
+    z-index: 3;
+    height: 18vw;
+    width: 25vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale(100%);
+    transition: ease-in-out 0.25s;
+}
+div.sectionC:hover{
+    filter: blur(0px) grayscale(0%);
+    transition: ease-in-out 0.25s;
+}
+a.midC{
+    background-image: url("https://cdn.discordapp.com/attachments/556796995088547851/876499329102262282/20210809_223227.png");
+    background-size: cover;
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+
+div.sectionD{
+    margin-left: 75vw;
+    position: absolute;
+    z-index: 3;
+    height: 17vw;
+    width: 24vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale(100%);
+    transition: ease-in-out 0.25s;
+}
+div.sectionD:hover{
+    filter: blur(0px) grayscale(0%);
+    transition: ease-in-out 0.25s;
+}
+a.midD{
+    background-image: url("https://cdn.discordapp.com/attachments/556796995088547851/872245538307850250/20210804_001050.png");
+    background-size: cover;
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+
+div.sectionE{
+    margin-left: 0vw;
+    margin-top: 20vw;
+    position: absolute;
+    z-index: 3;
+    height: 17vw;
+    width: 25vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale(100%);
+    transition: ease-in-out 0.25s;
+}
+div.sectionE:hover{
+    filter: blur(0px) grayscale(0%);
+    transition: ease-in-out 0.25s;
+}
+a.midE{
+    background-image: url("https://cdn.discordapp.com/attachments/556796995088547851/871880858112507995/20210802_210441.png");
+    background-size: cover;
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+
+div.sectionF{
+    margin-left: 25vw;
+    margin-top: 22vw;
+    position: absolute;
+    z-index: 3;
+    height: 18vw;
+    width: 25vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale(100%);
+    transition: ease-in-out 0.25s;
+}
+div.sectionF:hover{
+    filter: blur(0px) grayscale(0%);
+    transition: ease-in-out 0.25s;
+}
+a.midF{
+    background-image: url("https://cdn.discordapp.com/attachments/556796995088547851/850886690955460628/20210605_224537.png");
+    background-size: cover;
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+
+div.sectionG{
+    margin-left: 50vw;
+    margin-top: 18vw;
+    position: absolute;
+    z-index: 3;
+    height: 17vw;
+    width: 25vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale(100%);
+    transition: ease-in-out 0.25s;
+}
+div.sectionG:hover{
+    filter: blur(0px) grayscale(0%);
+    transition: ease-in-out 0.25s;
+}
+a.midG{
+    background-image: url("https://cdn.discordapp.com/attachments/556796995088547851/849895586392309791/20210603_000342.jpg");
+    background-size: cover;
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+
+div.sectionH{
+    margin-left: 75vw;
+    margin-top: 17vw;
+    position: absolute;
+    z-index: 3;
+    height: 33vw;
+    width: 24vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale(100%);
+    transition: ease-in-out 0.25s;
+}
+div.sectionH:hover{
+    filter: blur(0px) grayscale(0%);
+    transition: ease-in-out 0.25s;
+}
+a.midH{
+    background-image: url("https://cdn.discordapp.com/attachments/556796995088547851/848638190072233984/20210530_204505.jpg");
+    background-size: cover;
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+
+div.sectionI{
+    margin-left: 0vw;
+    margin-top: 37vw;
+    position: absolute;
+    z-index: 3;
+    height: 13vw;
+    width: 25vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale(100%);
+    transition: ease-in-out 0.25s;
+}
+div.sectionI:hover{
+    filter: blur(0px) grayscale(0%);
+    transition: ease-in-out 0.25s;
+}
+a.midI{
+    background-image: url("https://cdn.discordapp.com/attachments/556796995088547851/837076148331610112/20210428_231326.png");
+    background-size: cover;
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+
+div.sectionJ{
+    margin-left: 25vw;
+    margin-top: 40vw;
+    position: absolute;
+    z-index: 3;
+    height: 10vw;
+    width: 25vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale(100%);
+    transition: ease-in-out 0.25s;
+}
+div.sectionJ:hover{
+    filter: blur(0px) grayscale(0%);
+    transition: ease-in-out 0.25s;
+}
+a.midJ{
+    background-image: url("https://cdn.discordapp.com/attachments/556796995088547851/836714925035356180/20210427_231807.jpg");
+    background-size: cover;
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
+
+div.sectionK{
+    margin-left: 50vw;
+    margin-top: 35vw;
+    position: absolute;
+    z-index: 3;
+    height: 15vw;
+    width: 25vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale(100%);
+    transition: ease-in-out 0.25s;
+}
+div.sectionK:hover{
+    filter: blur(0px) grayscale(0%);
+    transition: ease-in-out 0.25s;
+}
+a.midK{
+    background-image: url("https://cdn.discordapp.com/attachments/717661956290510869/882762106091495454/unknown.png");
+    background-size: cover;
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
