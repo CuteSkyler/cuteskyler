@@ -69,7 +69,19 @@ p.c1{
 div.section1{
     position: absolute;
     z-index: 3;
-    height: 50vh;
+    height: 40vh;
+    width: 100vw;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.1);
+    filter: blur(10px) grayscale();
+    transition: ease-in-out 0.25s;
+}
+div.section1B{
+    margin-top: 40vh;
+    position: absolute;
+    z-index: 3;
+    height: 10vh;
     width: 100vw;
     border-width: 5px;
     border-style: solid;
@@ -124,6 +136,14 @@ a.mid{
     width: inherit;
     display: block;
 }
+a.mid1B{
+    background-image: url("./img/pp.png");
+    position: relative;
+    z-index: inherit;
+    height: inherit;
+    width: inherit;
+    display: block;
+}
 a.mid2{
     background-image: url("./img/dos.png");
     position: relative;
@@ -152,6 +172,9 @@ a.mid4{
 div.section1:hover{
     filter: blur(0px) grayscale(0%);
 }
+div.section1B:hover{
+    filter: blur(0px) grayscale(0%);
+}
 div.section2:hover{
     filter: blur(0px) grayscale(0%);
 }
@@ -172,6 +195,16 @@ p.mid{
     width: inherit; 
     position: fixed;
 }
+p.mid1B{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 3vh;
+    z-index: inherit;
+    height: inherit;
+    text-align: center;
+    vertical-align: middle;
+    width: inherit; 
+    position: fixed;
+}
 p.midB{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 9vh;
@@ -181,4 +214,12 @@ p.midB{
     position: absolute;
     height: 8vh;
     width: 33.33333vw;
+}
+
+.paypal{
+    position: fixed;
+    z-index: 25;
+    margin-top: 1vh;
+    margin-left: 44%;
+    width: 12.5%
 }
