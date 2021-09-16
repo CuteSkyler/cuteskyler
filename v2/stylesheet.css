@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #faa;
+}
+
+h1.title{
+    text-align: center;
+    font-family: 'Balsamiq Sans';
+    font-size: 6.5em;
+    margin-top: 1em;
+    color: #e99;
+    transition: ease-in-out 100ms;
+    text-shadow: currentColor 0 0 0.1em
+}
+
+h1.title:hover{
+    color: #faa;
+    text-shadow: currentColor 0 0 0.3em
+}
+
+section.content section.fullview{
+    animation: images 60s infinite ease-in-out;
+    transition: ease-in-out;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
+    height: 30vw;
+    border-radius: 20px;
+    background-image: url('https://cdn.discordapp.com/attachments/556796995088547851/837076148331610112/20210428_231326.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: top;
+}
+
+section.content section.fullview::after{
+    content: '';
+    background-color: khaki;
+    width: 40vw;
+    height: inherit;
+}
+
+section.content{
+    align-content: center;
+    justify-content: center;
+}
+
+body div.left{
+    float: left;
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    display: block;
+    background-color: #111;
+}
+
+body div.right{
+    float: right;
+    background-color: #aaa;
+    width: 50vw;
+    height: 100vh;
+}
+
+section.a, section.b, section.c{
+    float: left;
+    width: 25vw;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(1) blur(10px);
+    transition: ease-in-out 100ms;
+}
+
+section.a{
+    background-image: url('https://cdn.discordapp.com/attachments/556796995088547851/880213357716705320/20210825_232016.jpg');
+}
+
+section.b{
+    background-image: url('https://cdn.discordapp.com/attachments/556796995088547851/836714925035356180/20210427_231807.jpg');
+    background-position-x: 100%;
+}
+
+section.c{
+    width: 50vw;
+    background-position-y: 0;
+    margin-bottom: 0;
+    background-image: url('https://cdn.discordapp.com/attachments/556796995088547851/850886690955460628/20210605_224537.png');
+}
+
+section.a:hover, section.b:hover, section.c:hover{
+    filter: grayscale(0) blur(0px);
+}
+
+section.icons{
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+section.icons a img{
+    display: inline;
+    width: 2vw;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding-left: 10px;
+}
+
+@keyframes images{
+    0%, 100%{background-image: url('https://cdn.discordapp.com/attachments/556796995088547851/880213357716705320/20210825_232016.jpg')}
+    10%,19%{background-image: url('https://cdn.discordapp.com/attachments/556796995088547851/879786022874001468/20210824_190702.png')}
+    20%,29%{background-image: url('https://cdn.discordapp.com/attachments/556796995088547851/871880858112507995/20210802_210441.png')}
+    30%,39%{background-image: url('https://cdn.discordapp.com/attachments/556797084674555916/873379146879864832/615a.gif')}
+    40%,49%{background-image: url('https://cdn.discordapp.com/attachments/556797084674555916/866052756376780820/595full.png')}
+    50%,59%{background-image: url('https://cdn.discordapp.com/attachments/556797084674555916/862380641219903538/588c.png')}
+    60%,69%{background-image: url('https://cdn.discordapp.com/attachments/556797084674555916/818146495618220032/542a.png')}
+    70%,79%{background-image: url('https://cdn.discordapp.com/attachments/556797084674555916/815340491520082000/539a.png')}
+    80%,89%{background-image: url('https://cdn.discordapp.com/attachments/556796995088547851/850886690955460628/20210605_224537.png')}
+    90%,99%{background-image: url('https://cdn.discordapp.com/attachments/556796995088547851/837076148331610112/20210428_231326.png')}
+}
