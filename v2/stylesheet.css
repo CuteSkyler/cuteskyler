@@ -8,7 +8,7 @@ body{
 h1.title{
     text-align: center;
     font-family: 'Balsamiq Sans';
-    font-size: 6.5em;
+    font-size: 4vw;
     margin-top: 1em;
     color: #e99;
     transition: ease-in-out 100ms;
