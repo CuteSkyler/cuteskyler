@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+}
+
+div.upper section.title{
+    width: 100vw;
+    height: 4vh;
+    position: absolute;
+}
+
+.title h1{
+    text-align: left;
+    margin-left: 4vw;
+    font-size: 8vw;
+    margin-top: 15vh;
+    
+}
+
+div.upper section{
+    float: right;
+    width: 75vw;
+    height: 100vh;
+}
+
+.f1{
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://cdn.discordapp.com/attachments/556796995088547851/880213357716705320/20210825_232016.jpg?width=1065&height=855');
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    filter: blur(5px) grayscale(1);
+    transition: ease-in-out 100ms;
+}
+
+.f2{
+    clip-path: polygon(40% 40%, 40% 60%, 100% 100%, 100% 63%);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px) grayscale(1);
+    transition: ease-in-out 100ms;
+    background-image: url('https://cdn.discordapp.com/attachments/556796995088547851/850886690955460628/20210605_224537.png?width=106&height=855');
+}
+
+.f3{
+    clip-path: polygon(40% 100%, 40% 60%, 100% 100%);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(5px) grayscale(1);
+    transition: ease-in-out 100ms;
+    background-image: url('https://cdn.discordapp.com/attachments/556796995088547851/810191654622461952/IMG_20210212_213605_005.jpg?width=1065&height=855');
+}
+
+.f1:hover, .f2:hover, .f3:hover{
+    filter: blur(0px) grayscale(0);
+    transform: translateX(-0.4vw)
+}
+
+a{
+    width: inherit;
+    height: inherit;
+}
+
+
+.content{
+    position: absolute;
+    width: 50vw;
+    margin-left: 2.5vw;
+}
+
+.i1,.i2,.i3,.i4,.i5,.i6,.i7,.i8,.i9,.i10,.i11,.i12{
+    display: inline-block;
+    width: 14vh;
+    height: 29vh;
+    background-size: cover;
+    padding: 0;
+    background-position-x: center;
+    background-image: url('https://cdn.discordapp.com/attachments/556796995088547851/880213357716705320/20210825_232016.jpg');
+
+}
+
+.i2,.i4,.i6,.i7,.i9,.i11{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+}
+
+.i1,.i3,.i5,.i8,.i10,.i12{
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+    margin-left: 2vh;
+}
+
+.i7{
+    margin-left: 1.2vw;
+}
+
+.i1{
+    margin-top: 40vh;
+}
