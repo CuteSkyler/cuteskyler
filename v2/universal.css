@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+h1{
+    text-align: center;
+    font-family: 'Balsamiq Sans';
+    font-size: 4vw;
+    margin-top: 1em;
+    color: #e99;
+    transition: ease-in-out 100ms;
+    text-shadow: currentColor 0 0 0.1em
+}
+
+h1:hover{
+    color: #faa;
+    text-shadow: currentColor 0 0 0.3em
+}
