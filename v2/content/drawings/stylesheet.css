@@ -15,7 +15,6 @@ div.upper section.title{
     margin-left: 4vw;
     font-size: 8vw;
     margin-top: 15vh;
-    
 }
 
 div.upper section{
@@ -80,8 +79,18 @@ a{
     background-size: cover;
     padding: 0;
     background-position-x: center;
+    transform-style: preserve-3d;
     background-image: url('https://cdn.discordapp.com/attachments/556796995088547851/880213357716705320/20210825_232016.jpg');
 
+}
+
+.i1:hover,.i2:hover,.i3:hover,.i4:hover,.i5:hover,.i6:hover,.i7:hover,.i8:hover,.i9:hover,.i10:hover,.i11:hover,.i12:hover{
+    transform: rotateY(15deg)
+}
+
+.i1::before,.i2::before,.i3::before,.i4::before,.i5::before,.i6::before,.i7::before,.i8::before,.i9::before,.i10::before,.i11::before,.i12::before{
+    content: '';
+    background: rgb(255,255,255);
 }
 
 .i2,.i4,.i6,.i7,.i9,.i11{

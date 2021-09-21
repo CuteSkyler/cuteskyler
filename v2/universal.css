@@ -14,3 +14,32 @@ h1:hover{
     color: #faa;
     text-shadow: currentColor 0 0 0.3em
 }
+
+h2{
+    text-align: center;
+    font-family: 'Balsamiq Sans';
+    font-size: 6vw;
+    color: rgb(116, 72, 173);
+    transition: ease-in-out 100ms;
+    text-shadow: currentColor 0 0 0.1em
+}
+
+h2:hover{
+    color: rgb(106, 62, 163);
+    text-shadow: currentColor 0 0 0.3em
+}
+
+a p{
+    font-family: 'Balsamiq Sans';
+    font-size: 8vw;
+    margin-top: 0;
+    padding: 0;
+    color: #e99;
+    transition: ease-in-out 100ms;
+    text-shadow: currentColor 0 0 0.1em
+}
+
+a p:hover{
+    color: #faa;
+    text-shadow: currentColor 0 0 0.3em
+}
