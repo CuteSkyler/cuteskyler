@@ -75,18 +75,18 @@ var tradDrawingsVar = [
 function randomise(){
     var ran = Math.floor(Math.random()*tradDrawingsVar.length)
     var ran2 = Math.floor(Math.random()*tradDrawingsVar.length)
-    if(ran >= tradDrawingsVar.length-12){
-        ran = 59
+    if(ran >= tradDrawingsVar.length-10){
+        ran = tradDrawingsVar.length-11
     }
     if(ran2 >= tradDrawingsVar.length-3){
-        ran2 = 68
+        ran2 = tradDrawingsVar.length-4
     }
     for(let i = 0; i < 3; i++){
         document.getElementById('f'+(i+1)).style.backgroundImage = "url('"+tradDrawingsVar[ran2+i]+"')"
-        document.getElementById('af'+(i+1)).href = tradDrawingsVar[ran+i]
+        document.getElementById('af'+(i+1)).href = tradDrawingsVar[ran2+i]
     }
-    for(let i = 0; i < 12; i++){
-        document.getElementById('i'+(i+1)).style.backgroundImage = "url('"+tradDrawingsVar[ran+i]+"')"
+    for(let i = 0; i < 10; i++){
+        document.getElementById((i+1)).style.backgroundImage = "url('"+tradDrawingsVar[ran+i]+"')"
         document.getElementById('a'+(i+1)).href = tradDrawingsVar[ran+i]
     };
 };
