@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<section id="all">
+    <a href="https://www.youtube.com/BuffSkyler" class="icons">
+        <section id="youtube">
+            <section id="reflection"><section id="b"></section></section>
+            <section id="shiny"></section>
+            <section id="shine"></section>
+        </section>
+    </a>
+    <a href="https://www.twitter.com/CuteSkyler" class="icons">
+        <section id="twitter">
+            <section id="reflection"><section id="b"></section></section>
+            <section id="shiny"></section>
+            <section id="shine"></section>
+        </section>
+    </a>
+    <a href="https://www.cuteskyler.art/discord" class="icons">
+        <section id="discord">
+            <section id="reflection"><section id="b"></section></section>
+            <section id="shiny"></section>
+            <section id="shine"></section>
+        </section>
+    </a>
+    <a href="https://www.deviantart.com/cuteskylerquinn" class="icons">
+        <section id="deviantart">
+            <section id="reflection"><section id="b"></section></section>
+            <section id="shiny"></section>
+            <section id="shine"></section>
+        </section>
+    </a>
+    <a href="https://www.newgrounds.com/CuteSkyler" class="icons">
+        <section id="newgrounds">
+            <section id="reflection"><section id="b"></section></section>
+            <section id="shiny"></section>
+            <section id="shine"></section>
+        </section>
+    </a>
+    <a href="https://www.buymeacoffee.com/CuteSkyler" class="icons">
+        <section id="buymeacoffee">
+            <section id="reflection"><section id="b"></section></section>
+            <section id="shiny"></section>
+            <section id="shine"></section>
+        </section>
+    </a>
+</section>
+<div class="wall"></div>
+</body>
+<style>
+
+    @media (orientation: portrait){
+        section#all{
+            grid-template-columns: 30vw 30vw;
+            grid-template-rows: 40vw 40vw 40vw;
+            margin-left: calc((100vw - var(--logo-am-a)*27.5vw)/2);
+            margin-top: calc(5vh);
+        }
+        #youtube,#twitter,#discord,#deviantart,#newgrounds,#buymeacoffee{
+            width: 25vw;
+            height: 25vw;
+        }
+
+        #youtube section,#twitter section,#discord section,#deviantart section{
+            display: none;
+        }
+
+        #shiny,#shiny,#reflection,#b{
+            width: inherit;
+            height: inherit;
+        }
+    }
+
+    body{background-color: var(--bg); padding: 0; margin: 0;}
+    :root{
+        --bg: rgba(16,16,16,1);
+        --yt: url('./img/yt.png');
+        --tw: url('./img/tw.png');
+        --di: url('./img/di.png');
+        --da: url('./img/da.png');
+        --ng: url('./img/ng.png');
+        --bmac: url('./img/bmac.png');
+
+        --logo-am: 6;
+        --logo-am-a: 2;
+    }
+
+    section{
+        transition: ease-in-out 50ms;
+        position: fixed;
+        width: 7.5vw;
+        height: 7.5vw;
+        border-radius: 2rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @keyframes shiny {
+        0%{clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%); opacity: 0;}
+        50%{clip-path: polygon(0% 95%, 0% 100%, 5% 100%, 100% 5%, 100% 0%, 95% 0%); opacity: 1;}
+        100%{clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%); opacity: 0;}
+    }
+
+    #shiny{
+        position: absolute;
+        opacity: 0.25;
+        clip-path: polygon(0 100%, 0 0, 100% 0, 33% 6%, 24% 9%, 15% 15%, 9% 24%, 6% 33%);
+        background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 100%);
+    }
+
+    #shine{
+        position: absolute;
+        animation: shiny 500ms linear;
+        overflow: hidden;
+        opacity: 0;
+        background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
+        filter: drop-shadow(0px 0px 5px white) opacity(0.8);
+        clip-path: polygon(0% 95%, 0% 100%, 5% 100%, 100% 5%, 100% 0%, 95% 0%);
+    }
+
+    #all{
+        display: grid;
+        grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw;
+        grid-template-rows: 10vw;
+        margin-left: calc((100vw - var(--logo-am)*10vw)/2);
+        margin-top: calc(100vh/2 - 9vw);
+    }
+
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        text-align: center;
+    }
+
+    #youtube{
+        background-color: red;
+        filter: drop-shadow(0px 0px 5px red) drop-shadow(0px 0px 50px darkred);
+        background-image: var(--yt);
+    }
+    #youtube:hover{
+        filter: drop-shadow(0px 0px 15px red) drop-shadow(0px 0px 100px darkred);;
+    }
+
+    #twitter{
+        background-color: mediumturquoise;
+        filter: drop-shadow(0px 0px 5px mediumturquoise) drop-shadow(0px 0px 50px darkturquoise);
+        background-image: var(--tw);
+    }
+    #twitter:hover{
+        filter: drop-shadow(0px 0px 15px mediumturquoise) drop-shadow(0px 0px 100px darkturquoise);
+    }
+
+    #discord{
+        background-color: mediumpurple;
+        filter: drop-shadow(0px 0px 5px mediumpurple) drop-shadow(0px 0px 50px purple);
+        background-image: var(--di);
+    }
+    #discord:hover{
+        filter: drop-shadow(0px 0px 15px mediumpurple) drop-shadow(0px 0px 100px purple);
+    }
+
+    #deviantart{
+        background-color: yellowgreen;
+        filter: drop-shadow(0px 0px 5px yellowgreen) drop-shadow(0px 0px 50px green);
+        background-image: var(--da);
+    }
+    #deviantart:hover{
+        filter: drop-shadow(0px 0px 15px yellowgreen) drop-shadow(0px 0px 100px green);
+    }
+
+    #newgrounds{
+        background-color: orangered;
+        filter: drop-shadow(0px 0px 5px orangered) drop-shadow(0px 0px 50px darkorange);
+        background-image: var(--ng);
+    }
+    #newgrounds:hover{
+        filter: drop-shadow(0px 0px 15px orangered) drop-shadow(0px 0px 100px darkorange);
+    }
+
+    #buymeacoffee{
+        background-color: rgb(255, 196, 0);
+        filter: drop-shadow(0px 0px 5px rgb(255, 196, 0))  drop-shadow(0px 0px 50px orange);
+        background-image: var(--bmac);
+    }
+    #buymeacoffee:hover{
+        filter: drop-shadow(0px 0px 15px rgb(255, 196, 0))  drop-shadow(0px 0px 100px orange);
+    }
+
+    #reflection{
+        filter: none;
+        background: inherit;
+        position: absolute;
+        opacity: 0.25;
+        transform: rotateZ(180deg) rotateX(70deg) translateY(-250%);
+    }
+
+    #reflection section{
+        transform: scale(1.01);
+        background: linear-gradient(180deg, var(--bg) 0%, var(--bg) 10%, rgba(0,0,0,0) 100%);
+    }
+
+    .wall{
+        width: 100vw;
+        height: 100vh;
+        background-image: url('./img/wall.png');
+        background-color: var(--bg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: color-dodge;
+    }
+</style>
+</html>
