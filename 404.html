@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Oops, 404'd!</p>
+    <b>You landed on a non-existing page, idiot dev.</b>
+    <b>It's better to go back to a working page</b>
+    <a href="https://www.cuteskyler.art/v2/">
+        <section><br>FRONT PAGE</br></section>
+    </a>
+    <section id="bg"></section>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap');
+        :root{
+            --bg: rgba(16,16,16,1)
+        }
+
+        #bg{
+            animation: showing ease-in-out 1s;
+            filter: brightness(0.4);
+            width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: 100vw;
+            background-position: 0 30%;
+            background-image: url('https://cdn.discordapp.com/attachments/556797084674555916/776587761061724191/475f.gif')
+        }
+
+        p{
+            padding-top: calc((100vh - 10rem) / 3);
+            color: white;
+            animation: glowing 1s ease-in-out;
+            width: 100vw;
+            font-size: 10rem;
+            position: absolute;
+            text-align: center;
+            align-self: center;
+            justify-self: center;
+            z-index: 2;
+        }
+
+        a section{
+            animation: oooh 1s ease-in-out;
+            position: absolute;
+            width: 15vw;
+            height: 5vh;
+            background-color: lightcoral;
+            z-index: 3;
+            margin-left: calc(100vw/2 - 15vw/2);
+            margin-top: 65vh;
+            text-align: center;
+            color: black;
+            font-size: 2.75rem;
+        }
+
+        br{
+            position: absolute;
+            top: 15;
+        }
+
+        b{
+            padding-top: calc((100vh - 10rem)/1.45);
+            color: white;
+            animation: glowing 1s ease-in-out;
+            width: 100vw;
+            font-size: 2rem;
+            position: absolute;
+            text-align: center;
+            align-self: center;
+            justify-self: center;
+            z-index: 2;
+        }
+
+        b:nth-child(2){
+            padding-top: calc((100vh - 10rem)/1.55);
+        }
+
+        body{
+            font-family: 'Fuzzy Bubbles', cursive;
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            background-color: var(--bg);
+        }
+
+        @keyframes showing{
+            0%{filter: brightness(1);}
+            100%{filter: brightness(0.4);}
+        }
+
+        @keyframes glowing{
+            0%{color: rgb(0,0,0)}
+            100%{color: rgb(255,255,255);}
+        }
+
+        @keyframes oooh{
+            0%{background-color: rgb(0,0,0)}
+            100%{background-color: lightcoral;}
+        }
+    </style>
+</body>
+</html>
