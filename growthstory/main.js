@@ -133,9 +133,9 @@ function changeStats(muscChange, intlChange, mneyChange, wghtChange, engrChange)
     wghtChange = wghtChange * multiplier;
     intlChange = intlChange * multiplier;
     engrChange = engrChange / (1+multiplier/10);
-    mneyChange = mneyChange * (intelligence / 100);
-    if(muscle + muscChange <= 10){muscle = 10;};
     mneyChange = Math.floor(mneyChange * (intelligence / 100));
+    if(muscle + muscChange <= 10){muscle = 10;}
+    else if(muscle + muscChange > 10){muscle += muscChange;};
     if(intelligence + intlChange <= 50){intelligence = 50;}
     else if(intelligence + intlChange > 50){intelligence += intlChange;};
     if(money + mneyChange <= 0){money = 0;}
