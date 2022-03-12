@@ -119,6 +119,16 @@ function showStats(){
 
 function changeStats(muscChange, intlChange, mneyChange, wghtChange, engrChange){
     var char = document.getElementById('character').style;
+    if(muscChange > 0){alert('plus', 'muscle');}
+    else if(muscChange < 0){alert('minus', 'muscle')};
+    if(intlChange > 0){alert('plus', 'intelligence');}
+    else if(intlChange < 0){alert('minus', 'intelligence')};
+    if(mneyChange > 0){alert('plus', 'money');}
+    else if(mneyChange < 0){alert('minus', 'money')};
+    if(wghtChange > 0){alert('plus', 'weight');}
+    else if(wghtChange < 0){alert('minus', 'weight')};
+    if(engrChange > 0){alert('plus', 'energy');}
+    else if(engrChange < 0){alert('minus', 'energy')};
     muscChange = muscChange * multiplier;
     wghtChange = wghtChange * multiplier;
     intlChange = intlChange * multiplier;
@@ -146,6 +156,12 @@ function changeStats(muscChange, intlChange, mneyChange, wghtChange, engrChange)
     document.getElementById('money').innerText = `Money: ${money}$`;
     document.getElementById('weight').innerText = `Weight: ${weight}kg`;
     document.getElementById('energy').innerText = `Energy: ${energy}%`;
+    return;
+}
+
+function alert(which, att){
+    document.getElementById(att).style.animation = `${which} 1s linear`;
+    setTimeout(()=>{document.getElementById(att).style.animation = ``;},1000);
     return;
 }
 
