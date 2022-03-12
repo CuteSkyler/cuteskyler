@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Caveat', cursive;
+    font-size: 2vh;
+    line-height: 32px;
+}
+
+body{
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+:root{
+    --width: 100vmin;
+}
+
+#page{
+    width: var(--width);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#image{
+    width: calc(var(--width)*0.8);
+    height: calc(var(--width)*0.4);
+    background: darkgray;
+    margin-top: calc(0.125*9/16*80%);
+    margin-bottom: 20px;
+    margin-inline: 10%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10%;
+}
+
+#character{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    filter: drop-shadow(-25px 25px 25px rgba(0,0,0,0.7));
+    position: relative;
+    transform-origin: bottom;
+    transform: scale(1);
+    z-index: 50;
+}
+
+#text{
+    width: calc(var(--width)*0.75);
+    height: calc(var(--width)*0.5);
+    background: url(./img/end_stone.png);
+    background-size: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    clip-path: polygon(0 10%, 10% 0, 100% 0%, 100% 90%, 90% 100%, 0% 100%);
+}
+
+#prompt{
+    height: 40%;
+    margin-top: calc(var(--width)*0.015);
+    width: calc(var(--width)*0.6);
+    background: rgba(128,128,128,0.5);
+    clip-path: polygon(0 10%, 10% 0, 100% 0%, 100% 90%, 90% 100%, 0% 100%);
+    display: flex;
+    justify-content: center;
+}
+
+#options{
+    max-height: 50%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.opt{
+    margin-top: 5px;
+    max-width: calc(var(--width)*0.55);
+    padding-inline: 10px;
+    background-color: rgba(64,64,64,0.25);
+    border-radius: 50vw;
+    text-align: center;
+    transition: ease-in-out 0.25s;
+}
+
+.opt:hover{
+    padding-inline: 20px;
+    padding-block: 5px;
+    background-color: rgba(64,64,64,0.35);
+}
+
+.opt:active{
+    background-color: rgba(64,64,64,0.6);
+    font-size: 1.8vh;
+}
+
+#inputs{
+    width: calc(var(--width)*0.55);
+    display: flex;
+}
+
+input{
+    margin-block: 10px;
+    text-align: center;
+    width: calc(var(--width)*0.55/2);
+    font-size: 2vh;
+}
+
+p{
+    max-width: 80%;
+    text-align: left;
+    overflow-y: scroll;
+    padding-block: 25px;
+    scrollbar-width: none;
+    font-size: 2.4vh;
+}
+
+#bg{
+    width: var(--width);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(0.5vh);
+    position: absolute;
+    z-index: -1;
+}
+
+#stats{
+    display: flex;
+    flex-direction: row;
+}
+
+.stat{
+    background-color: rgba(64,64,64,0.25);
+    margin-inline: 10px;
+    padding-inline: 10px;
+    color: white;
+}
+
+@keyframes appear{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes plus{
+    0%{background-color: rgba(64,64,64,0.25);}
+    5%{background-color: rgba(255,255,255,0.25)}
+    35%{background-color: rgba(0, 255, 0, 0.5);}
+    100%{background-color: rgba(64,64,64,0.25);}
+}
+
+@keyframes plus{
+    0%{background-color: rgba(64,64,64,0.25);}
+    5%{background-color: rgba(255,255,255,0.25)}
+    35%{background-color: rgba(255, 0, 0, 0.5);}
+    100%{background-color: rgba(64,64,64,0.25);}
+}
