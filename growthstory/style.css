@@ -164,3 +164,43 @@ p{
     35%{background-color: rgba(255, 0, 0, 0.5);}
     100%{background-color: rgba(64,64,64,0.25);}
 }
+
+@media screen and (max-height: 1000px) and (max-width: 500px) {
+    *{
+        font-size: small;
+        line-height: 100%;
+    }
+    #page{
+        overflow: hidden;
+    }
+    .opt{
+        margin-block: 2px;
+        max-height: 10%;
+        font-size: 150%;
+        line-height: 150%;
+        padding-bottom: 15%;
+    }
+    #prompttext{
+        font-size: 150%;
+        padding: 5%;
+    }
+    #inputs{
+        margin-top: 10px;
+        flex-direction: column;
+    }
+    input{
+        width: 100%;
+        margin-block: 0;
+        font-size: 125%;
+    }
+    #prompt{
+        height: 40%;
+        margin-bottom: 10px;
+    }
+    #image{
+        height: 50%;
+    }
+    #text{
+        height: 50%;
+    }
+}
