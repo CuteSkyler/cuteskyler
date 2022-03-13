@@ -179,6 +179,8 @@ p{
         font-size: 150%;
         line-height: 150%;
         padding-bottom: 15%;
+        text-overflow: clip;
+        overflow: hidden;
     }
     #prompttext{
         font-size: 150%;
