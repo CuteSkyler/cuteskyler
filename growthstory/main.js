@@ -135,13 +135,13 @@ function changeStats(muscChange, intlChange, mneyChange, wghtChange, engrChange)
     engrChange = engrChange / (1+multiplier/10);
     mneyChange = mneyChange * (intelligence / 100);
     if(muscle + muscChange <= 10){muscle = 10;}
-    else if(muscle + muscChange > 10){muscle += muscChange;};
+    else if(muscle + muscChange > 10){muscle += Math.floor(muscChange);};
     if(intelligence + intlChange <= 50){intelligence = 50;}
-    else if(intelligence + intlChange > 50){intelligence += intlChange;};
+    else if(intelligence + intlChange > 50){intelligence += Math.floor(intlChange);};
     if(money + mneyChange <= 0){money = 0;}
-    else if(money + mneyChange > 0){money += mneyChange;};
+    else if(money + mneyChange > 0){money += Math.floor(mneyChange);};
     if(weight + wghtChange <= muscle+10){weight = muscle+10;}
-    else if(weight + wghtChange > muscle+10){weight += wghtChange;};
+    else if(weight + wghtChange > muscle+10){weight += Math.floor(wghtChange);};
     if(energy + engrChange <= 0){energy = 0;}
     else if(energy + engrChange > 100){energy = 100;}
     else if(energy + engrChange > 0){energy += Math.floor(engrChange);};
