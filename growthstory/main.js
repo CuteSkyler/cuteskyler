@@ -263,7 +263,7 @@ function checkCookie(){
     if(energyC !== ""){energy = parseInt(energyC)};
     if(stageC !== ""){stage = parseInt(stageC)};
     if(purchasedC !== ""){purchased = purchasedC};
-    if(multiplierC !== ""){multiplier = multiplierC};
+    if(multiplierC !== ""){multiplier = parseInt(multiplierC)};
     return;
 };
 
