@@ -88,7 +88,8 @@ var druggieScreen = {
     firstvalue: function(){
         if(money >= 100){
             changeScene(`Thank you for your puchase, ${yourname}!`, druggieScreen, 0, 0, -100, 0, 0);
-            multiplier += .5
+            multiplier += .5;
+	    bought();
         }
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
@@ -97,7 +98,8 @@ var druggieScreen = {
     secondvalue:  function(){
         if(money >= 100){
             changeScene(`Thank you for your puchase, ${yourname}!`, druggieScreen, 0, 0, -500, 0, 0);
-            multiplier += 1
+            multiplier += 1;
+	    bought();
         }
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
@@ -106,7 +108,8 @@ var druggieScreen = {
     thirdvalue: function(){
         if(money >= 100){
             changeScene(`Thank you for your puchase, ${yourname}!`, druggieScreen, 0, 0, -1000, 0, 0);
-            multiplier += 2
+            multiplier += 2;
+	    bought();
         }
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
@@ -128,7 +131,8 @@ var booksScreen = {
         if(money >= 10){
             changeScene(`Thank you for your puchase, ${yourname}!`, booksScreen, 0, 50, -150, 0, 0);
             purchased.booka = true;
-            multiplier += 1
+            multiplier += 1;
+	    bought();
         }
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
@@ -142,7 +146,8 @@ var booksScreen = {
         if(money >= 10){
             changeScene(`Thank you for your puchase, ${yourname}!`, booksScreen, 0, 100, -300, 0, 0);
             purchased.bookb = true;
-            multiplier += 1.5
+            multiplier += 1.5;
+	    bought();
         }
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
@@ -156,7 +161,8 @@ var booksScreen = {
         if(money >= 10){
             changeScene(`Thank you for your puchase, ${yourname}!`, booksScreen, 0, 300, -500, 0, 0);
             purchased.booka = true;
-            multiplier += 4
+            multiplier += 4;
+	    bought();
         }
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
@@ -190,7 +196,8 @@ var lightEquipmentScreen = {
         if(money >= 10){
             changeScene(`Thank you for your puchase, ${yourname}!`, lightEquipmentScreen, 0, 0, -10, 0, 0);
             purchased.jumpingrope = true;
-            multiplier += .25
+            multiplier += .25;
+	    bought();
         }
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
@@ -204,7 +211,8 @@ var lightEquipmentScreen = {
         if(money >= 25){
             changeScene(`Thank you for your puchase, ${yourname}!`, lightEquipmentScreen, 0, 0, -25, 0, 0);
             purchased.punchingbag = true;
-            multiplier += .5}
+            multiplier += .5;
+	    bought();}
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
         },
@@ -217,7 +225,8 @@ var lightEquipmentScreen = {
         if(money >= 50){
             changeScene(`Thank you for your puchase, ${yourname}!`, lightEquipmentScreen, 0, 0, -50, 0, 0);
             purchased.smallweights = true;
-            multiplier += .75}
+            multiplier += .75;
+	    bought();}
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
         }, 
@@ -236,7 +245,8 @@ var heavyEquipmentScreen = {
         if(money >= 500){
             changeScene(`Thank you for your puchase, ${yourname}!`, heavyEquipmentScreen, 0, 0, -500, 0, 0);
             purchased.trainingbike = true;
-            multiplier += 1}
+            multiplier += 1;
+	    bought();}
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
         }, 
@@ -249,7 +259,8 @@ var heavyEquipmentScreen = {
         if(money >= 750){
             changeScene(`Thank you for your puchase, ${yourname}!`, heavyEquipmentScreen, 0, 0, -750, 0, 0);
             purchased.treadmill = true;
-            multiplier += 1.5}
+            multiplier += 1.5;
+	    bought();}
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
         },
@@ -262,7 +273,8 @@ var heavyEquipmentScreen = {
         if(money >= 1000){
             changeScene(`Thank you for your puchase, ${yourname}!`, heavyEquipmentScreen, 0, 0, -1000, 0, 0);
             purchased.generaluse = true;
-            multiplier += 2.5}
+            multiplier += 2.5;
+	    bought();}
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
         }, 
@@ -281,7 +293,8 @@ var exHeavyEquipmentScreen = {
         if(money >= 2500){
             changeScene(`Thank you for your puchase, ${yourname}!`, exHeavyEquipmentScreen, 0, 0, -2500, 0, 0);
             purchased.barbells = true;
-            multiplier += 5}
+            multiplier += 5;
+	    bought();}
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
         }, 
@@ -294,7 +307,8 @@ var exHeavyEquipmentScreen = {
         if(money >= 5000){
             changeScene(`Thank you for your puchase, ${yourname}!`, exHeavyEquipmentScreen, 0, 0, -5000, 0, 0);
             purchased.curlbench = true;
-            multiplier += 7}
+            multiplier += 7;
+	    bought();}
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
         },
@@ -307,7 +321,8 @@ var exHeavyEquipmentScreen = {
         if(money >= 10000){
             changeScene(`Thank you for your puchase, ${yourname}!`, exHeavyEquipmentScreen, 0, 0, -10000, 0, 0);
             purchased.latpulldown = true; 
-            multiplier += 10}
+            multiplier += 10;
+	    bought();}
         else{
             extraBabble(`Not enough cash, ${yourname}`)};
         }, 
