@@ -50,6 +50,7 @@ var vanessaStages = [
 
 var Arnie = "./img/710c.png";
 var Merica = "./img/704c.png"
+var Foxy = "./img/657a.png"
 var villager = "./img/villagerplaceholder.png"
 
 var muscle = 25;
@@ -63,10 +64,12 @@ var bgs = [
     "./img/647b.png",   /*Main Square*/
     "./img/700d.png",   /*Beach 2*/
     "./img/705c.png",   /*Beach*/
-    "./img/bg2.png"     /*Shopping Centre*/
+    "./img/bg2.png",     /*Shopping Centre*/
+    "./img/710b.png"    /*Beach Competition*/
 ]
 
 function startUp(){
+    checkCookie();
     changeName();
     changeImage(bgs[0]);
     changeOptions(defaultScreen);
@@ -94,6 +97,8 @@ function changeOptions(option){
     if(option.value){startup = true};
     if(!option.value){startup = false};
     if(option.character === "Villager"){document.getElementById('character').style.backgroundImage = `url(${villager})`; char.transform = `scale(1)`}
+    else if(option.character === "Arnie"){document.getElementById('character').style.backgroundImage = `url(${Arnie})`; char.transform = `scale(1)`}
+    else if(option.character === "Foxy"){document.getElementById('character').style.backgroundImage = `url(${Foxy})`; char.transform = `scale(1)`}
     else if(option.character === "Vanessa"){document.getElementById('character').style.backgroundImage = `url(${vanessaStages[stage]})`; char.transform = `scale(${sizemulti})`;}
     else if(option.character === false){document.getElementById('character').style.backgroundImage = ``};
     if(stage < 6){changeImage(bgs[option.bg])};
@@ -132,8 +137,8 @@ function changeStats(muscChange, intlChange, mneyChange, wghtChange, engrChange)
     muscChange = muscChange * multiplier;
     wghtChange = wghtChange * multiplier;
     intlChange = intlChange * multiplier;
-    engrChange = engrChange / (1+multiplier/10);
-    mneyChange = mneyChange * (intelligence / 100);
+    engrChange = engrChange * multiplier;
+    mneyChange = mneyChange;
     if(muscle + muscChange <= 10){muscle = 10;}
     else if(muscle + muscChange > 10){muscle += Math.floor(muscChange);};
     if(intelligence + intlChange <= 50){intelligence = 50;}
@@ -241,3 +246,73 @@ var purchased = {
 }
 
 startUp();
+
+function checkCookie(){
+    let muscleC = getCookie('muscleAAA');
+    let intelligenceC = getCookie('intelligenceAAA');
+    let moneyC = getCookie('moneyAAA');
+    let weightC = getCookie('weightAAA');
+    let energyC = getCookie('energyAAA');
+    let stageC = getCookie('stageAAA');
+    let purchasedC = getCookie('purchasedAAA');
+    let multiplierC = getCookie('multiplierAAA');
+    if(muscleC !== ""){muscle = parseInt(muscleC)};
+    if(intelligenceC !== ""){intelligence = parseInt(intelligenceC)};
+    if(moneyC !== ""){money = parseInt(moneyC)};
+    if(weightC !== ""){weight = parseInt(weightC)};
+    if(energyC !== ""){energy = parseInt(energyC)};
+    if(stageC !== ""){stage = parseInt(stageC)};
+    if(purchasedC !== ""){purchased = purchasedC};
+    if(multiplierC !== ""){multiplier = multiplierC};
+    return;
+};
+
+setInterval(()=>{
+    setCookie('muscleAAA', muscle);
+    setCookie('intelligenceAAA', intelligence);
+    setCookie('moneyAAA', money);
+    setCookie('weightAAA', weight);
+    setCookie('energyAAA', energy);
+    setCookie('purchasedAAA', purchased);
+    setCookie('multiplierAAA', multiplier);
+}, 5000)
+
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+};
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;SameSite=Lax";
+    return;
+}
+
+function deleteAll(){
+    var cookieList = ["muscleAAA", "intelligenceAAA", "moneyAAA", "weightAAA", "energyAAA", "multiplierAAA", "purchasedAAA"];
+    let dialog = "Are you sure you want to delete your savegame?"
+    if(confirm(dialog) == true){
+        for(let i = 0; i < cookieList.length; i++){
+            document.cookie = `${cookieList[i]}=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;SameSite=Lax`;
+            window.location.reload();
+        };
+    }
+    else{
+        return;
+    }
+    return;
+};
