@@ -80,6 +80,13 @@ function startUp(){
     return;
 };
 
+function bought(){
+    let purchasedC = getCookie('purchasedAAA');
+    setCookie('purchasedAAA', purchased);
+    if(purchasedC !== ""){purchased = purchasedC};
+    return;
+}
+
 function changeImage(bglink){
     document.getElementById('image').style.background = "";
     document.getElementById('image').style.backgroundImage = `url(${bglink})`;
@@ -254,7 +261,6 @@ function checkCookie(){
     let weightC = getCookie('weightAAA');
     let energyC = getCookie('energyAAA');
     let stageC = getCookie('stageAAA');
-    let purchasedC = getCookie('purchasedAAA');
     let multiplierC = getCookie('multiplierAAA');
     if(muscleC !== ""){muscle = parseInt(muscleC)};
     if(intelligenceC !== ""){intelligence = parseInt(intelligenceC)};
@@ -262,7 +268,6 @@ function checkCookie(){
     if(weightC !== ""){weight = parseInt(weightC)};
     if(energyC !== ""){energy = parseInt(energyC)};
     if(stageC !== ""){stage = parseInt(stageC)};
-    if(purchasedC !== ""){purchased = purchasedC};
     if(multiplierC !== ""){multiplier = parseInt(multiplierC)};
     return;
 };
@@ -273,7 +278,6 @@ setInterval(()=>{
     setCookie('moneyAAA', money);
     setCookie('weightAAA', weight);
     setCookie('energyAAA', energy);
-    setCookie('purchasedAAA', purchased);
     setCookie('multiplierAAA', multiplier);
 }, 5000)
 
