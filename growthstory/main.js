@@ -137,7 +137,7 @@ function changeStats(muscChange, intlChange, mneyChange, wghtChange, engrChange)
     muscChange = muscChange * multiplier;
     wghtChange = wghtChange * multiplier;
     intlChange = intlChange * multiplier;
-    engrChange = engrChange * multiplier;
+    engrChange = engrChange;
     mneyChange = mneyChange;
     if(muscle + muscChange <= 10){muscle = 10;}
     else if(muscle + muscChange > 10){muscle += Math.floor(muscChange);};
