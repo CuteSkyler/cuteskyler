@@ -366,6 +366,9 @@ iframe{
 }
 
 @media screen and (max-width: 800px){
+    body{
+        overflow-x: hidden;
+    }
     .contacts{
         display: grid;
         grid-template-rows: auto;
