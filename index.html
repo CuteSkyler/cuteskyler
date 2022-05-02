@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | cuteskyler.art</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="artworkarray.js"></script>
+</head>
+
+<body>
+    <main>
+        <div id="upper">
+            <div id="title"> 
+                <div id="website">cuteskyler.ART</div>
+                <div id="profession">Web developer, traditional- digital- and 3d artist.</div>
+            </div>
+        </div>
+        <header>
+            <nav>
+                <ul>
+                    <li><a onclick='scr(0)'>Home</a></li>
+                    <li><a onclick='scr(1)'>3d ARtwork</a></li>
+                    <li><a onclick='scr(2)'>tRAditionAl ARtwork</a></li>
+                    <li><a onclick='scr(3)'>coding</a></li>
+                    <li><a onclick='scr(100)'>contAct</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="between" id="bg1"></div>
+        <div id="content-3d" class="content perspective">
+            <div id="renderinfo" class="info">
+                <h2>three dimensional artwork</h2>
+                <p>
+                    Since 2019, I have been creating three dimensional artworks, using the program Mine-Imator. All my renders are related to Minecraft. I've been creating three dimensional animations as well, combining audio- and video- editing together.
+                </p>
+            </div>
+            <div id="artwork-grid" class="grid perspective">
+                <div class="gridartwork topleft bottomleft" id="img1"></div>
+                <div class="gridartwork" id="img2"></div>
+                <div class="gridartwork topright" id="img3"></div>
+                <div class="gridartwork" id="img4"></div>
+                <div class="gridartwork bottomright" id="img5"></div>
+            </div>
+        </div>
+        <div class="between" id="bg2"></div>
+        <div id="content-2d" class="content perspective">
+            <div id="drawinginfo" class="info alt">
+                <h2>traditional artwork</h2>
+                <p>
+                    Before three dimensional artwork was my main occupation (apart from coding), creating traditional artwork was my mainstay. While I do still create traditional artwork, I do it less often than I used to, but I still enjoy it nonetheless.
+                </p>
+            </div>
+            <div id="drawing-grid" class="grid alt perspective">
+                <div class="gridartwork topleft bottomleft" id="img6"></div>
+                <div class="gridartwork" id="img7"></div>
+                <div class="gridartwork" id="img8"></div>
+                <div class="gridartwork topright bottomright" id="img9"></div>
+                <div class="gridartwork" id="img10"></div>
+            </div>
+        </div>
+        <div class="between" id="bg3"></div>
+        <div id="content-coding" class="content perspective">
+            <div id="codinginfo" class="info">
+                <h2>coding</h2>
+                <p>
+                    Since around 2020, I started dabbling into programming in Javascript. My first project was a Discord bot for my <a href="https://www.discord.gg/cuteskyler" style="color: var(--link);">Discord Server</a>. Afterwards, I made my own website which you're now on, creating games, webpages and other projects.
+                </p>
+            </div>
+            <div class="code">
+                <div id="langs" class="perspective">
+                    <div id="css" class="lang"></div>
+                    <div id="html" class="lang"></div>
+                    <div id="js" class="lang"></div>
+                </div>
+            </div>
+        </div>
+        <div class="between" id="bg4"></div>
+        <footer>
+            <div class="contacts">
+                <div class="discord">
+                    <iframe src="https://discord.com/widget?id=556613305901383710&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                </div>
+                <section class="twitter">
+                    <a class="twitter-timeline" href="https://twitter.com/CuteSkyler?ref_src=twsrc%5Etfw">Tweets by CuteSkyler</a>
+                </section>
+            </div>
+        </footer>
+    </main>
+</body>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<style>
+    #bg1 {
+        background-image: url('https://cdn.discordapp.com/attachments/556797084674555916/970300214118322207/738b.png');
+    }
+    #bg2 {
+        background-image: url('https://cdn.discordapp.com/attachments/556797084674555916/946868729579450388/710a.png');
+    }
+    #bg3 {
+        background-image: url('https://cdn.discordapp.com/attachments/556797084674555916/953548505425788968/729aL.png');
+    }
+    #bg4 {
+        background-image: url('https://cdn.discordapp.com/attachments/556797084674555916/946488155668877342/705a.png');
+    }
+</style>
+<script>
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const vmin = Math.min(vw, vh)
+
+    function scr(e){
+        scroll({top: e*vh, behavior: "smooth"});
+    }
+
+    setTimeout(()=>{document.querySelector('#twitter-widget-0').style.width = '';}, 5000);
+
+    // for (let i = 1; i < 4; i++) {
+    //     document.querySelector(`#bg${i}`).style.backgroundImage = `url('${artworks[Math.floor(Math.random() * artworks.length)]}')`;
+    // }
+
+    const scrolls = setTimeout(()=>{
+        scr(1.15);
+        setTimeout(()=>{
+            scr(2.15);
+            setTimeout(()=>{
+                scr(3.15);
+                setTimeout(()=>{
+                    scr(100);
+                }, 5000)
+            }, 5000)
+        }, 5000)
+    }, 5000);
+</script>
+</html>
