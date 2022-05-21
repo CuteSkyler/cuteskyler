@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos | cuteskyler.art</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/556797084674555916/776587761061724191/475f.gif">
+    <meta property="og:description" content="A custom made video player for all* of CuteSkyler's videos. (*most)">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="@CuteSkyler">
+    <meta property="twitter:site:id" content="@CuteSkyler">
+    <meta property="twitter:creator" content="@CuteSkyler">
+    <meta property="twitter:creator:id" content="@CuteSkyler">
+    <meta property="og:title" content="Videos | cuteskyler.art">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.cuteskyler.art/">
+    <meta data-react-helmet="true" property="og:image" content="https://cdn.discordapp.com/attachments/556797084674555916/776587761061724191/475f.gif">
+    <meta data-react-helmet="true" property="twitter:image" content="https://cdn.discordapp.com/attachments/556797084674555916/776587761061724191/475f.gif">
+</head>
+<body>
+    <header>
+        <a href="https://www.cuteskyler.art/"><div>cuteskyler.art</div></a>
+    </header>
+    <main>
+        <div id="main">
+            <video>
+                <source src="https://cdn.discordapp.com/attachments/717661956290510869/977277734311038996/tfw_mc.webm" type="video/webm">
+                <source src="https://cdn.discordapp.com/attachments/625039840509165628/968611027195400242/tfw_mc.mp4" type="video/mp4">
+            </video>
+            <div id="overlay">
+                <div id="top">
+                    <div id="title">tfw_mc.mp4</div>
+                </div>
+                <div id="bottom">
+                    <div id="play">▶</div>
+                    <div id="volume">🔊</div>
+                    <input onchange="changeVolume(volumeslider.value, video);" type="range" id="volumebar" min="0" max="100"></input>
+                    <div id="timestamp">00:00 / 00:00</div>
+                    <input type="range" id="timebar" value="0" min="0">
+                    <div id="options">⚙</div>
+                    <div id="theatre">🎞</div>
+                    <div id="fullscreen">💻</div>
+                </div>
+            </div>
+        </div>
+        <div id="recommended"></div>
+        <div id="video-details">
+            <div id="video-main">
+                <div id="video-title"><b></b></div>
+                <div id="video-date"></div>
+            </div>
+            <div id="video-extra">
+                <div id="video-details"></div>
+            </div>
+            <div id="buttons">
+                <div class="button" id="mp4-download">Download (.mp4)</div>
+                <div class="button" id="webm-download">Download (.webm)</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <template>
+        <div class="suggestion">
+            <div class="thumbnail"></div>
+            <div class="details">
+                <div class="title"><b></b></div>
+                <div class="description"></div>
+                <div class="date"></div>
+            </div>
+        </div>
+    </template>
+</body>
+</html>
