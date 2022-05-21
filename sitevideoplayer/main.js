@@ -246,7 +246,7 @@ const vids = [
 
 function returnURL(){
     let url = new URL(location.href);
-    return url.searchParams.get('video');
+    return url.searchParams.get('video') || 0;
 };
 
 document.body.onkeydown = function(key){
