@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Permanent+Marker&family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+:root{
+    --size: min(2vmax, 16px);
+    --font: min(1vmax);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    font-size: var(--font);
+}
+
+div#sheet{
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    background: linear-gradient(243deg, rgba(247,213,255,1) 20%, rgba(177,251,255,1) 80%);
+    overflow: hidden;
+}
+
+div#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: 25;
+    filter: drop-shadow(-12px -12px 12px rgba(0,0,0,0.25));
+}
+
+div#sheet div#grid{
+    position: relative;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        hsl(36, 100%, 75%) 10%,
+        hsl(179, 68%, 75%) 40%,
+        hsl(188, 76%, 75%) 50%,
+        hsl(212, 86%, 75%) 60%,
+        hsl(308, 97%, 75%) 90%
+    );
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    transform: rotateX(80deg) translateX(-25%);
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+div#sheet div.part{
+    width: 100%;
+    height: 100%;
+    outline: 1px solid black;
+    filter: drop-shadow(2px 2px 3px black);
+    isolation: isolate;
+}
+
+div#sheet table{
+    position: absolute;
+    background: linear-gradient(243deg, rgba(247,213,255,1) 20%, rgba(177,251,255,1) 80%);
+    font-size: 300%;
+    font-family: 'Permanent Marker', cursive;
+    border: calc(var(--size) * 0.5) solid black;
+    border-spacing: 0;
+}
+
+div#sheet table td{
+    font-family: 'Patrick Hand', cursive;
+    text-align: center;
+}
+
+div#sheet table th b{
+    font-weight: 900;
+}
+
+div#sheet table *[data-none]{
+    background-image: repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 0, transparent 50%);
+    background-size: 8px 8px;
+}
+
+div#sheet table td, div#sheet table th{
+    padding: 10px;
+    border-inline: calc(var(--size) * 0.2) solid black;
+}
+
+div#sheet table th{
+    border-bottom: calc(var(--size) * 0.4) solid black;
+}
+
+div#sheet tr[data-money] td{
+    border-bottom: calc(var(--size) * 0.4) solid black;
+}
+
+div#sheet tr:not([data-money]) td:not([data-none]){
+    border-bottom: calc(var(--size) * 0.2) solid black;
+}
+
+div#sheet p{
+    text-transform: lowercase;
+    font-size: 500%;
+    font-family: 'Major Mono Display', monospace;
+    text-align: right;
+    transform: translateY(-250%);
+    background-color: rgba(0,0,0,0.25);
+    color: white;
+    padding: 1rem;
+    margin: 0;
+}
+
+div#sheet div#imagea, div#sheet div#imageb{
+    transform-origin: bottom;
+    position: absolute;
+    height: 100vh;
+    transform: scale(-1, 1) translateX(10%);
+    bottom: 0;
+    z-index: 3;
+    aspect-ratio: 3119/4062;
+    background-image: url('https://cdn.discordapp.com/attachments/717661956290510869/990026955086762034/761s.png');
+    background-size: contain;
+    filter: drop-shadow(-12px -12px 12px rgba(0,0,0,0.25));
+}
+
+div#sheet div#imageb{
+    transform:translateX(10%);
+    bottom: 0;
+    right: 0;
+    aspect-ratio: 1500/2200;
+    background-image: url('https://cdn.discordapp.com/attachments/717661956290510869/990030287977209916/750s.png');
+}
+
+@media screen and (max-width: 800px){
+    div#sheet div#imagea{
+        height: 50vh;
+        transform: scale(-1, 1) translateX(10%);
+        aspect-ratio: 3119/4062;
+    }
+
+    div#sheet div#imageb{
+        height: 50vh;
+        transform:translateX(10%);
+        aspect-ratio: 1500/2200;
+    }
+
+    :root{
+        --font: .333rem;
+    }
+}
