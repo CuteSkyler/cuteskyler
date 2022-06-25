@@ -40,7 +40,7 @@ div#main{
 
 div#sheet div#grid{
     position: relative;
-    width: 200%;
+    width: calc(var(--size)*500);
     height: 100%;
     background: linear-gradient(
         90deg,
@@ -247,6 +247,11 @@ div#sheet *[data-info]::before{
 
 div#sheet *[data-info]:hover::before{
     transform: scale(1);
+}
+
+div#sheet a{
+    color: black;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 800px){
