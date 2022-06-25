@@ -72,6 +72,7 @@ div#sheet table{
     font-size: 300%;
     font-family: 'Permanent Marker', cursive;
     border: calc(var(--size) * 0.5) solid black;
+    border-radius: 25px;
     border-spacing: 0;
 }
 
@@ -112,10 +113,23 @@ div#sheet p{
     font-family: 'Major Mono Display', monospace;
     text-align: right;
     transform: translateY(-250%);
-    background-color: rgba(0,0,0,0.25);
+    background-color: rgba(0,0,0,0.4);
     color: white;
     padding: 1rem;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px 12px 0 0;
+}
+
+div#sheet p::after{
+    content: 'Hover for more info';
+    position: absolute;
+    font-size: 25%;
+    bottom: 100%;
+    background-color: inherit;
+    padding: 12px;
+    border-radius: 12px 12px 0 0;
 }
 
 div#sheet div#imagea, div#sheet div#imageb{
@@ -136,23 +150,117 @@ div#sheet div#imageb{
     bottom: 0;
     right: 0;
     aspect-ratio: 1500/2200;
-    background-image: url('https://cdn.discordapp.com/attachments/717661956290510869/990030287977209916/750s.png');
+    background-image: url('https://cdn.discordapp.com/attachments/717661956290510869/990235737733607475/750s.png');
+}
+
+div#sheet .title::before, div#sheet .title::after{
+    --bg: url('');
+    content: '';
+    position: absolute;
+    display: inline-flex;
+    bottom: 0;
+    transform: translateY(75%);
+    transform-origin: center;
+    height: 0%;
+    aspect-ratio: 1/1;
+    background-image: var(--bg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: height 250ms ease-in, outline 250ms ease-in;
+    outline: 0px solid black;
+    filter: drop-shadow(-3px -3px 12px rgba(0,0,0,0.25))
+}
+
+div#sheet .title:hover::before, div#sheet .title:hover::after{
+    transition: height 250ms ease-out, outline 250ms ease-out;
+    outline: 3px solid black;
+    height: 50%;
+}
+
+div#sheet .title::after{
+    transform: translateY(150%);
+}
+
+div#sheet *[data-drawings]::before{
+    --bg: url('https://cdn.discordapp.com/attachments/556796995088547851/922425315844816906/unknown.png');
+}
+
+div#sheet *[data-drawings]::after{
+    aspect-ratio: 2393/1797;
+    --bg: url('https://cdn.discordapp.com/attachments/556796995088547851/889641760043708417/20210921_000039.jpg');
+}
+
+div#sheet *[data-renders]::before{
+    --bg: url('https://cdn.discordapp.com/attachments/556797084674555916/978064230571991060/747a1.png');
+}
+
+div#sheet *[data-renders]::after{
+    aspect-ratio: 9/16;
+    --bg: url('https://cdn.discordapp.com/attachments/556797084674555916/946868729579450388/710a.png');
+}
+
+div#sheet *[data-animation]::before{
+    aspect-ratio: 16/9;
+    --bg: url('https://cdn.discordapp.com/attachments/556797230724415498/818599080259092540/530wipA.gif');
+}
+
+div#sheet *[data-animation]::after{
+    --bg: url('https://cdn.discordapp.com/attachments/556797084674555916/990022018567139342/765a.gif');
+}
+
+div#sheet *[data-character]::before{
+    aspect-ratio: 16/9;
+    --bg: url('https://cdn.discordapp.com/attachments/556797084674555916/934182771579035689/JasmineRef.png');
+}
+
+div#sheet *[data-character]::after{
+    aspect-ratio: 9/16;
+    --bg: url('https://cdn.discordapp.com/attachments/556797230724415498/821541611108040744/unknown.png');
+}
+
+div#sheet td:not([data-none]):hover, div#sheet th:not([data-none]):hover {
+    background-color: rgba(51, 51, 51, 0.1);
+}
+
+div#sheet *[data-info]{
+    z-index: 3;
+    isolation: isolate;
+    perspective: var(--size)*500;
+}
+
+div#sheet *[data-info]::before{
+    content: attr(data-info);
+    color: white;
+    position: absolute;
+    background-color: rgba(0,0,0,0.75);
+    margin-top: calc(var(--size)*4.5);
+    transform-origin: top;
+    font-size: calc(var(--font)*2);
+    max-width: 24ch;
+    max-height: 24ch;
+    transform: scale(0);
+    transition: transform 100ms ease-in;
+    padding: var(--size);
+    border-radius: var(--size);
+}
+
+div#sheet *[data-info]:hover::before{
+    transform: scale(1);
 }
 
 @media screen and (max-width: 800px){
-    div#sheet div#imagea{
-        height: 50vh;
-        transform: scale(-1, 1) translateX(10%);
-        aspect-ratio: 3119/4062;
-    }
-
-    div#sheet div#imageb{
-        height: 50vh;
-        transform:translateX(10%);
-        aspect-ratio: 1500/2200;
-    }
-
     :root{
         --font: .333rem;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    div#sheet .title::after{
+        transform: translateY(100%) translateX(-25%);
+    }
+    div#sheet *[data-animation]::before{
+        background-position: 100% 0%;
+        background-size: 150%;
     }
 }
