@@ -130,6 +130,10 @@ header div#buttons a{
     text-decoration: none;
 }
 
+#title{
+    color: white;
+}
+
 header > div#buttons > a{
     min-width: fit-content;
     max-width: none;
