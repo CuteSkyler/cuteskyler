@@ -141,6 +141,7 @@ header > div#buttons > a{
 }
 
 footer{
+    color: white;
     text-align: center;
     padding: 1rem;
 }
@@ -150,6 +151,7 @@ h3{
 }
 
 #renders, #drawings, #prices{
+    color: white;
     padding: 2rem;
     width: 100vw;
     
