@@ -89,6 +89,11 @@ header{
     top: 0;
     position: sticky;
     z-index: 5;
+    background-color: #000000af;
+}
+
+header *{
+    text-align: center;
 }
 
 header div#buttons{
@@ -349,4 +354,66 @@ h3{
 
 #Vanessa4{
     background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/931974814984441856/685a.png);
+}
+
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 850px) {
+    h1{
+        font-size: 5rem;
+    }
+
+    header div#buttons a{
+        font-size: 1rem;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 700px){
+    h1{
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 4rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    h1 p#title{
+        grid-column: span 3;
+    }
+    h1 #x{
+        text-align: right;
+    }
+    h1 #y{
+        text-align: center;
+    }
+    h1 #z{
+        text-align: left;
+    }
+    #grid-drawings, #grid-renders{
+        display: grid;
+        grid-template-columns: 1fr;
+        aspect-ratio: 1/11;
+    }
+    .wide,.wider,.widest,.long,.longer,.longest{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    header{
+        position: sticky;
+        bottom: 0;
+    }
+    header p:nth-child(5){
+        display: none;
+    }
+    #prices a{
+        text-align: center;
+        font-size: 1.5rem;
+    }
 }
