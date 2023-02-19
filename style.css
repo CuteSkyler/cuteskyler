@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Major Mono Sans', monospace;
+    scroll-behavior: smooth;
+}
+
+div#panorama{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 8rem;
+    text-transform: uppercase;
+
+    transform: perspective(1000px) translateZ(-999px) scale(2);
+    z-index: 3;
+    position: absolute;
+    color: #ffffff;
+    filter:drop-shadow(0px 0px 5px black);
+
+    scroll-margin: 500px;
+}
+
+#x{
+    color: rgb(255, 135, 135);
+}
+
+#y{
+    color: rgb(135, 255, 135);
+}
+
+#z{
+    color: rgb(135, 135, 255);
+}
+
+#x,#y,#z{
+    position: relative;
+    transition: ease-in;
+}
+
+#x:hover{
+    animation: x 1s ease-in-out;
+}
+
+#y:hover{
+    animation: y 1s ease-in-out;
+}
+
+#z:hover{
+    animation: z 1s ease-in-out;
+}
+
+@keyframes x{
+    0%, 100%{transform: scale(1)}
+    50%{transform: scale(1.5)}
+}
+
+@keyframes y{
+    0%, 100%{transform: translateY(0)}
+    50%{transform: translateY(25%)}
+}
+
+@keyframes z{
+    0%, 100%{transform: translateZ(0)}
+    50%{transform: translateX(50%)}
+}
+
+#back{
+    width: 100vw;
+    height: calc(100vh - 7.5vh);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('https://cdn.discordapp.com/attachments/717661956290510869/1076671669575372902/image.png');
+    filter: blur(3px);
+}
+
+header{
+    min-height: 7.5vh;
+    top: 0;
+    position: sticky;
+    z-index: 5;
+}
+
+header div#buttons{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    padding-top: 0rem;
+}
+
+div#buttons a:hover, div#buttons a:focus{
+    color: black;
+    border: none;
+    outline: none;  
+    filter: drop-shadow(0 0 3px white);
+}
+
+header div:not(#buttons){
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+header div#buttons a{
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+header > div#buttons > a{
+    min-width: fit-content;
+    max-width: none;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    background-color: transparent;
+    border: none;
+}
+
+footer{
+    text-align: center;
+    padding: 1rem;
+}
+
+h3{
+    font-size: 4rem;
+}
+
+#renders, #drawings, #prices{
+    padding: 2rem;
+    width: 100vw;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#prices a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3rem;
+    padding: 1.5rem;
+    font-size: 2rem;
+    background-color: gray;
+    color: black;
+    text-decoration: none;
+    border-radius: 1rem;
+    transition: ease-out 100ms;
+}
+
+#prices a:hover{
+    transition: ease-in 100ms;
+    transform: scale(1.1);
+    color: white;
+}
+
+#grid-drawings{
+    padding: 2rem;
+    width: 90vw;
+    max-width: 1500px;
+    aspect-ratio: 9/20;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+#grid-renders{
+    padding: 2rem;
+    width: 90vw;
+    aspect-ratio: 9/23;
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+
+
+
+
+/* IMAGES */ 
+.img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    transition: ease-out 100ms;
+    filter: drop-shadow(0 0 0 black);
+}
+
+.img:hover{
+    filter: drop-shadow(0 0 10px black);
+    z-index: 2;
+    transform: scale(1.1);
+    transition: ease-in 100ms;
+}
+
+.wide{
+    grid-column: span 2;
+}
+
+.wider{
+    grid-column: span 3;
+}
+
+.widest{
+    grid-column: span 4;
+}
+
+.long{
+    grid-row: span 2;
+}
+
+.longer{
+    grid-row: span 3;
+}
+
+.longest{
+    grid-row: span 4;
+}
+
+#Wanda {
+    background-image: url(https://cdn.discordapp.com/attachments/556796995088547851/1053677783802445845/EPSON054-1.png);
+}
+
+#Wanda2 {
+    background-image: url(https://cdn.discordapp.com/attachments/556796995088547851/1053016956271333387/EPSON054-0.png);
+}
+
+#Kanna {
+    background-image: url(https://cdn.discordapp.com/attachments/556796995088547851/1052346796925538334/EPSON039-13.png);
+}
+
+#Jaiden2 {
+    background-image: url(https://cdn.discordapp.com/attachments/556796995088547851/1009878120897183805/EPSON020.png);
+}
+
+#Ena{
+    background-image: url(https://cdn.discordapp.com/attachments/556796995088547851/1051664739526258708/EPSON039-2.png);
+}
+
+#Squidling{
+    background-image: url(https://cdn.discordapp.com/attachments/556796995088547851/1052676234217259028/EPSON039-0.png);
+}
+
+#Kanna2{
+    background-image: url(https://cdn.discordapp.com/attachments/556796995088547851/1052125494050570280/EPSON039-1.png);
+}
+
+#Jaiden3{
+    background-image: url(https://cdn.discordapp.com/attachments/556796995088547851/1049756096442679296/EPSON039-8.png);
+}
+
+#Jenny{
+    background-image: url(https://cdn.discordapp.com/attachments/556796995088547851/1049424027145490512/EPSON039-4.png);
+}
+
+#Mae{
+    background-image: url(https://cdn.discordapp.com/attachments/556796995088547851/1012834727759204422/EPSON033trans.png);
+}
+
+#Jaiden4{
+    background-image: url(https://cdn.discordapp.com/attachments/556796995088547851/1011034635146375238/EPSON028-2.png);
+}
+
+#Jaiden5{
+    background-image: url(https://cdn.discordapp.com/attachments/556796995088547851/1010956171500331208/EPSON028-1.png);
+}
+
+#Jaiden6{
+    background-image: url(https://cdn.discordapp.com/attachments/717661956290510869/1076691574601306182/mother_and_daughter_problems_by_cuteskylerquinn_dfbslr2-fullview.png);
+}
+
+#Vanessa{
+    background-image: url(https://cdn.discordapp.com/attachments/717661956290510869/1076691692465434674/where_are_you__gregory__by_cuteskylerquinn_dfbq0t5-pre.png);
+}
+
+
+#Alex{
+    background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/1047152888637558834/857a.gif);
+}
+
+#Skyler{
+    background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/1046543686810484856/855a.gif);
+}
+
+#Foxy{
+    background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/1041047040660090890/852a.gif);
+}
+
+#Cheyenne{
+    background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/1034163085151313960/839b.gif);
+}
+
+#Alex2{
+    background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/1029877087433146409/826b.gif);
+}
+
+#Alex3{
+    background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/1028658216554467398/824a.gif);
+}
+
+#DanMingle{
+    background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/994464690732269568/784aF.png);
+}
+
+#Skyler2{
+    background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/990724231044169738/767a.gif);
+}
+
+#Skyler3{
+    background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/989319944552460359/761comic.png);
+}
+
+#Merica{
+    background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/980231534051217498/750a.png);
+}
+
+#Arnie{
+    background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/946868729579450388/710a.png);
+}
+
+#Vanessa2{
+    background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/943575149876236338/700a.png);
+}
+
+#Vanessa3{
+    background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/943185596820648036/699b.png);
+}
+
+#Vanessa4{
+    background-image: url(https://cdn.discordapp.com/attachments/556797084674555916/931974814984441856/685a.png);
+}
