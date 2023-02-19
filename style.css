@@ -7,6 +7,10 @@
     scroll-behavior: smooth;
 }
 
+body{
+    background-color: #333;
+}
+
 div#panorama{
     display: flex;
     justify-content: center;
