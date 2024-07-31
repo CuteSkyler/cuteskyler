@@ -170,15 +170,15 @@ function generatePrompt(
 
         setTimeout(()=>{ document.querySelector('#upper video').style.animation = '' },250);
     }
-    // else{
-    //     let img = document.createElement('img');
-    //     document.querySelector('#upper').prepend(img);
-    //     if(!overrideImage) document.querySelector('#upper img').src = `./renders/${theoptions.character}/${image}.gif`;
-    //     else document.querySelector('#upper img').src = overrideImage;
-    //     document.querySelector('#upper img').style.animation = 'showCharacter 250ms ease-out forwards';
+    else{
+        let img = document.createElement('img');
+        document.querySelector('#upper').prepend(img);
+        if(!overrideImage) document.querySelector('#upper img').src = `./renders/${theoptions.character}/${image}.gif`;
+        else document.querySelector('#upper img').src = overrideImage;
+        document.querySelector('#upper img').style.animation = 'showCharacter 250ms ease-out forwards';
 
-    //     setTimeout(()=>{ document.querySelector('#upper img').style.animation = '' },250);
-    // }
+        setTimeout(()=>{ document.querySelector('#upper img').style.animation = '' },250);
+    }
     document.querySelector('#upper .bg').style.backgroundImage = `var(--${background}`;
 
     return 'Successful!';
