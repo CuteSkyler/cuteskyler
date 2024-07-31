@@ -1,0 +1,506 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --scale-factor: 1;
+
+    --header-size: 2rem;
+    --header-padding: 1rem;
+
+    --accent-colour: rgb(165, 130, 165);
+
+
+    /* Background Images */
+    --background-image: #fff;
+    --generic-bg: #fff;
+    --alpha-bg: url('./renders/alpha.png');
+    --small-store-bg: url('./renders/background/store.png');
+    --store-bg: url('./renders/background/mall.png');
+    --alley-bg: url('./renders/background/alley.png');
+    --outside-bg: url('./renders/background/outside.png');
+    --gym-bg: url('');
+    /* --bedroom-bg: url('https://cdn.wallpapersafari.com/73/13/e2QEwX.png'); */
+    --bedroom-bg: url('./renders/background/bedroom.png');
+    --job-bg: url('');
+    --beach-bg: url('./renders/background/beach.png');
+}
+
+header{
+    width: 100vw;
+    padding: var(--header-padding);
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--accent-colour);
+}
+
+h1{
+    line-height: 0.5;
+    font-weight: 100;
+}
+
+h2{
+    position: absolute;
+    text-shadow: black 3px 3px 2px;
+    color: rgb(255, 255, 0);
+    transform-origin: center;
+    text-align: center;
+    animation: 1s ease-in-out boing infinite;
+}
+
+#passcode{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    font-size: 24px;
+    height: 24px;
+    width: min-content;
+    text-align: center;
+    padding: 1rem;
+}
+
+@keyframes boing{
+    0%, 100% {transform: rotate(-10deg) translate(60%, 200%) scale(1);}
+    50% {transform: rotate(-10deg) translate(60%, 200%) scale(1.1);}
+}
+
+footer{
+    padding: var(--header-padding);
+    background-color: var(--accent-colour);
+}
+
+header > div{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 25%;
+    min-width: 25ch;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: calc(var(--header-size) + var(--header-padding)) 1fr calc(var(--header-size) + var(--header-padding));
+}
+
+main{
+    height: 100%;
+    overflow: scroll;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+main > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+#upper img, #upper video{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+main > *:nth-child(1) > .bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: var(--background-image);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+/* This sucks ass*/
+main > *:nth-child(1)::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    filter: none;
+    z-index: -5;
+}
+/*This sucks ass*/
+
+main > *:nth-child(2) > .bg{
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-colour);
+    filter: brightness(0.75);
+    position: absolute;
+    z-index: -1;
+}
+
+main > *:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#prompt{
+    font-size: calc(var(--scale-factor)*1.5rem);
+    display: grid;
+    grid-template-rows: 40% 60%;
+    height: 100%;
+    width: 100%;
+}
+
+#prompt > #story{
+    --margin: 1.5rem;
+    height: calc(100% - 2*var(--margin));
+    overflow-y: scroll;
+    padding: var(--margin);
+    background-color: rgba(0,0,0,0.5);
+    margin-block: var(--margin);
+    margin-inline: var(--margin);
+    color: white;
+}
+
+#prompt > #story > *{
+    display: inline;
+}
+
+#prompt > #story > #text > #speaker{
+    display: inline;
+    padding-right: 1rem;
+    font-size: calc(var(--scale-factor)*2rem);
+    font-weight: 900;
+}
+
+#prompt > #options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#prompt > #options > *{
+    border-radius: 1rem;
+    background-color: gray;
+    padding: 1rem;
+    max-width: 75%;
+    font-size: calc(var(--scale-factor)*2rem);
+    transition: padding-inline ease-in-out 100ms;
+}
+
+#prompt > #options > *:hover{
+    padding-inline: 4rem;
+}
+
+
+
+/* STATS */
+
+#stats{
+    isolation: isolate;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    left: -100%;
+}
+
+#stats > #overlay{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    padding: 3rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    overflow-y: scroll;
+}
+
+button#showmenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: calc(var(--scale-factor)*2rem);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    background: var(--accent-colour);
+    opacity: 0.4;
+    border: 0px;
+    z-index: 255;
+}
+
+#stats > #overlay > #statistics{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1rem;
+    /* grid-column: span 2; */
+}
+
+#stats > #overlay > #statistics > *{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 1rem;
+}
+
+#stats > #overlay > #statistics > * > label{
+    font-size: calc(var(--scale-factor)*1.5rem);
+}
+
+#stats > #overlay > #statistics > * > p{
+    font-size: calc(var(--scale-factor)*3rem);
+}
+
+#stats > #overlay > #statistics > * > p > span{
+    font-size: 0.6em;
+}
+
+#stats > .bg{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    z-index: -1;
+    background-color: var(--accent-colour);
+}
+
+#options .option[value='Not Availble...']{
+    color: gray;
+}
+
+
+/* ACHIVEMENT */
+
+#achievements{
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.rare{
+    isolation: isolate;
+    outline: yellow 1px solid;
+    filter: drop-shadow(yellow 0px 0px 25px);
+}
+
+.rare::after{
+    content: '';
+    width: 98%;
+    height: 90%;
+    border-radius: inherit;
+    position: absolute;
+    left: 1%;
+    top: 5%;
+    outline: yellow 10px solid;
+    filter: blur(25px);
+}
+
+.achievement{
+    --margin: 1rem;
+    width: min(calc(50vw - 2*var(--margin)), 26rem);
+    position: relative;
+    z-index: 25565;
+    margin: var(--margin);
+    margin-top: 0;
+    background-color: var(--accent-colour);
+    padding: var(--margin);
+    border-radius: 1rem;
+    animation: showAchievement 5s ease-in-out forwards;
+}
+
+.achievement.stop{
+    animation: none !important;
+}
+
+.achievement > div{
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    gap: 1rem;
+}
+
+.achievement > div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.achievement > div > div > p:nth-child(1){
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.achievement > div > div > p:nth-child(2){
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 2rem;
+    padding: 1rem;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.disabled{
+    cursor: not-allowed;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+
+
+/* SETTINGS */
+
+#global_settings{
+    display: flex;
+    flex-direction: column;
+}
+
+#optionaire{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+#optionaire > *:not([type="submit"]){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+#optionaire label{
+    padding: 0.3rem;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#optionaire > *[type="submit"]{
+    padding: 0.4rem;
+    margin: 1rem;
+    border: none;
+    border-radius: 0;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    font-weight: 100;
+    transition: font-size 50ms ease-in-out;
+}
+
+#optionaire > *[type="submit"]:hover{
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+
+#optionaire > * input{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* BANNER */
+
+#banner{
+    inset-block: 50%;
+    position: fixed;
+    z-index: 9999999999;
+    isolation: isolate;
+    width: 100vw;
+    height: 20vh;
+    font-size: calc(5rem * var(--scale-factor));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 100;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    left: -100%;
+}
+
+
+
+
+h1{
+    animation: fade-in-fade-out 10s linear infinite;
+}
+
+h4{
+    position: absolute;
+    line-height: 0.5;
+    font-weight: 100;
+    font-size: 2rem;
+    opacity: 0;
+    animation: fade-out-fade-in 10s linear infinite;
+}
+
+@keyframes fade-in-fade-out{
+    0%, 50%, 100%{opacity: 0}
+    5%, 45%{opacity: 1}
+}
+
+@keyframes fade-out-fade-in{
+    0%, 50%, 100%{opacity: 1}
+    5%, 45%{opacity: 0}
+}
+
+@keyframes cheese{
+    0%{left: -100%;}
+    25%,50%{left: 0;}
+    100%{left: 100%;}
+}
+
+@keyframes cheese_{
+    0%{transform: translateX(-100%);}
+    25%{transform: translateX(-10%);}
+    50%{transform: translateX(10%);}
+    100%{transform: translateX(100%);}
+}
+
+
+@keyframes showAchievement{
+    0%{left: 100%}
+    33%{left: 0%}
+    66%{left: 0%}
+    100%{left: 100%}
+}
+
+@keyframes show{
+    0%{left: -100%}
+    100%{left: 0%;}
+}
+
+@keyframes showCharacter{
+    from {opacity: 0; transform: scale(0.9) translateY(-1%); transform-origin: bottom;}
+    to {opacity: 1; transform: scale(1) translateY(0%); transform-origin: bottom;}
+}
+
+@keyframes positive{
+    0%{background: rgba(0,0,0,0.5);}
+    2%{background: greenyellow;}
+    100%{background: rgba(0,0,0,0.5);}
+}
+
+@keyframes negative{
+    0%{background: rgba(0,0,0,0.5);}
+    2%{background: red;}
+    100%{background: rgba(0,0,0,0.5);}
+}
