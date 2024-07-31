@@ -32,7 +32,7 @@ let mall = {
 };
 
 let gymnsons = {
-    prompt: [ 'The Store Owner', "Welcome to Gym 'n Son's, we have everything to get you started on your journey to grow some mass!", 'currentSize', 'small-store-bg', './renders/misc_characters/steve.gif'],
+    prompt: [ 'The Store Owner', "Welcome to Gym 'n Son's, we have everything to get you started on your journey to grow some mass!", 'currentSize', 'small-store-bg', 'https://files.catbox.moe/t2pcb5.gif'],
     options: [
         'Buy threadmill ($200)',
         'Buy punchingbag ($400)',
@@ -62,7 +62,7 @@ let gymnsons = {
 };
 
 let abdomnilia = {
-    prompt: [ 'Miss. Abdomnilia', "Hello and good day; welcome to our refined sets of workout equipment, feel free to peruse in our shoppe.", 'currentSize', 'small-store-bg', './renders/misc_characters/Witch.gif'],
+    prompt: [ 'Miss. Abdomnilia', "Hello and good day; welcome to our refined sets of workout equipment, feel free to peruse in our shoppe.", 'currentSize', 'small-store-bg', 'https://files.catbox.moe/ufrsrs.gif'],
     options: [
         'Buy heavy exercise machines ($1000)',
         'Buy gigantic dumbbells ($4000)',

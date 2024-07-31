@@ -2,6 +2,27 @@ let goal = 1000;
 let multiplier = 1;
 const max_goal = 7;
 
+const stagelinks = {
+    "Vanessa": [
+        "https://files.catbox.moe/65eyb3.webm",
+        "https://files.catbox.moe/qdqnx9.webm",
+        "https://files.catbox.moe/5obov8.webm",
+        "https://files.catbox.moe/fr9fp3.webm",
+        "https://files.catbox.moe/bndsi6.webm",
+        "https://files.catbox.moe/6twbuw.webm",
+        "https://files.catbox.moe/qi5mnb.webm"
+    ],
+    "Nady": [
+        "https://files.catbox.moe/euiy5q.webm",
+        "https://files.catbox.moe/mwrrr7.webm",
+        "https://files.catbox.moe/2qwl2u.webm",
+        "https://files.catbox.moe/0oflfa.webm",
+        "https://files.catbox.moe/b9bzfw.webm",
+        "https://files.catbox.moe/b9bzfw.webm",
+        "https://files.catbox.moe/jo7d5t.webm"
+    ]
+}
+
 function addDetails([muscle, height, intelligence, money, energy], check){
 
     // if(check) return;

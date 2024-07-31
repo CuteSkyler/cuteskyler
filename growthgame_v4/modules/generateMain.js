@@ -159,12 +159,12 @@ function generatePrompt(
 
     if(image.startsWith('currentSize')) image = regimen.stage;
 
-    if(webm_or_gif === 'webm' && !overrideImage.endsWith('.png')){
+    if(webm_or_gif === 'webm' && !overrideImage.endsWith('.png') && !overrideImage.endsWith('.gif')){
         let webm = document.createElement('video');
         webm.autoplay = true;
         webm.loop = true;
         document.querySelector('#upper').prepend(webm);
-        if(!overrideImage) document.querySelector('#upper video').src = `./renders/${theoptions.character}/${image}.webm`;
+        if(!overrideImage) document.querySelector('#upper video').src = `${stagelinks[theoptions.character][image]}`;
         else document.querySelector('#upper video').src = overrideImage;
         document.querySelector('#upper video').style.animation = 'showCharacter 250ms ease-out forwards';
 
@@ -413,7 +413,7 @@ const randomEncountersJunkie = [
         prompt: {
             prompt: [ '', `
                 You gave the junkie $100 to receive... a muscular boost!
-            `, 'currentSize', 'alley-bg', './renders/misc_characters/steve.gif'],
+            `, 'currentSize', 'alley-bg', 'https://files.catbox.moe/t2pcb5.gif'],
             options: [
                 'Back...'
             ],
@@ -432,7 +432,7 @@ const randomEncountersJunkie = [
         prompt: {
             prompt: [ '', `
                 You gave the junkie $100 to receive... a muscular loss...
-            `, 'currentSize', 'alley-bg', './renders/misc_characters/steve.gif'],
+            `, 'currentSize', 'alley-bg', 'https://files.catbox.moe/t2pcb5.gif'],
             options: [
                 'Back...'
             ],
@@ -451,7 +451,7 @@ const randomEncountersJunkie = [
         prompt: {
             prompt: [ '', `
                 You gave the junkie $100 to receive... a lengthening boost!
-            `, 'currentSize', 'alley-bg', './renders/misc_characters/steve.gif'],
+            `, 'currentSize', 'alley-bg', 'https://files.catbox.moe/t2pcb5.gif'],
             options: [
                 'Back...'
             ],
@@ -470,7 +470,7 @@ const randomEncountersJunkie = [
         prompt: {
             prompt: [ '', `
                 You gave the junkie $100 to receive... a shortening loss...
-            `, 'currentSize', 'alley-bg', './renders/misc_characters/steve.gif'],
+            `, 'currentSize', 'alley-bg', 'https://files.catbox.moe/t2pcb5.gif'],
             options: [
                 'Back...'
             ],
@@ -489,7 +489,7 @@ const randomEncountersJunkie = [
         prompt: {
             prompt: [ '', `
                 You gave the junkie $100 to receive... an intellectual stimulant!
-            `, 'currentSize', 'alley-bg', './renders/misc_characters/steve.gif'],
+            `, 'currentSize', 'alley-bg', 'https://files.catbox.moe/t2pcb5.gif'],
             options: [
                 'Back...'
             ],
@@ -508,7 +508,7 @@ const randomEncountersJunkie = [
         prompt: {
             prompt: [ '', `
                 You gave the junkie $100 to receive... a dumber maker...
-            `, 'currentSize', 'alley-bg', './renders/misc_characters/steve.gif'],
+            `, 'currentSize', 'alley-bg', 'https://files.catbox.moe/t2pcb5.gif'],
             options: [
                 'Back...'
             ],
@@ -527,7 +527,7 @@ const randomEncountersJunkie = [
         prompt: {
             prompt: [ '', `
                 You gave the junkie $100 to receive... a garguantuan boost in energy! You feel energized to the max!
-            `, 'currentSize', 'alley-bg', './renders/misc_characters/steve.gif'],
+            `, 'currentSize', 'alley-bg', 'https://files.catbox.moe/t2pcb5.gif'],
             options: [
                 'Back...'
             ],

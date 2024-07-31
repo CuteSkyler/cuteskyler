@@ -29,7 +29,7 @@ let meetfoxy_3 = {
 };
 
 let meetfoxy_4 = {
-    prompt: [ `Foxy`, `Heyhey! My name's Foxy! Sorry if I scared you, seeing how big I am, haha! Hope you're doing alright; I see you're also getting your pump on, glad to see it!`, 'currentSize', 'beach-bg', './renders/misc_characters/Foxy.gif'],
+    prompt: [ `Foxy`, `Heyhey! My name's Foxy! Sorry if I scared you, seeing how big I am, haha! Hope you're doing alright; I see you're also getting your pump on, glad to see it!`, 'currentSize', 'beach-bg', 'https://files.catbox.moe/t2pcb5.gif'],
     options: [
         'You respond...'
     ],
@@ -59,7 +59,7 @@ let meetfoxy_5 = {
 };
 
 let meetfoxy_6 = {
-    prompt: [ `Foxy`, `Oh yeah, for sure, dude! You'll see me getting more muscle before you can say 'dumbbell'! It was great meeting you, Vanessa! Let's meet again sometime, with hopefully larger bodies!`, 'currentSize', 'beach-bg', './renders/misc_characters/Foxy.gif'],
+    prompt: [ `Foxy`, `Oh yeah, for sure, dude! You'll see me getting more muscle before you can say 'dumbbell'! It was great meeting you, Vanessa! Let's meet again sometime, with hopefully larger bodies!`, 'currentSize', 'beach-bg', 'https://files.catbox.moe/t2pcb5.gif'],
     options: [
         'You end the conversation with...'
     ],

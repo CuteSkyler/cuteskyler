@@ -89,7 +89,7 @@ let beach = {
 
 
 let junkie = {
-    prompt: [ '', "You walk towards a weird guy in an alleyway, he seems weirdly trustworthy but at the same time very sketchy. Buying things here have a major risk of going wrong, but it would be at your own discretion.", 'currentSize', 'alley-bg', './renders/misc_characters/steve.gif'],
+    prompt: [ '', "You walk towards a weird guy in an alleyway, he seems weirdly trustworthy but at the same time very sketchy. Buying things here have a major risk of going wrong, but it would be at your own discretion.", 'currentSize', 'alley-bg', 'https://files.catbox.moe/t2pcb5.gif'],
     options: [
         'Try to gamble for good stimulants...',
         'Back...'
