@@ -158,17 +158,17 @@ const vids = [
         title: 'Vanessa Muscle Growth', 
         date: '15/10/2020', 
         description: "Catagory: Muscle Growth\nVanessa finds an odd red amulet in the caves. The feeling of touching it causes Vanessa's muscles to grow unexpectedly. Her muscles pulsating and flexing making Vanessa grow gigantic amounts of muscle by eating huge amounts of food.", 
-        thumbnail: 'https://cdn.discordapp.com/attachments/556797084674555916/747557989006835782/426.png',
+        thumbnail: 'https://files.catbox.moe/rgsdwa.jpeg',
         webm: null,
-        mp4: 'https://cdn.discordapp.com/attachments/717661956290510869/977519131752534056/Produce_18.mp4'
+        mp4: 'https://files.catbox.moe/jhfqeu.mp4'
     },
     {
         title: 'Foxy Muscle Workout', 
         date: '17/11/2020', 
         description: "Catagory: Muscle Growth\nFoxy does her usual workout routine.", 
-        thumbnail: 'https://cdn.discordapp.com/attachments/556797084674555916/909432962083356713/656b.png',
+        thumbnail: 'https://files.catbox.moe/cle2zv.jpg',
         webm: null,
-        mp4: 'https://cdn.discordapp.com/attachments/556797084674555916/780198407163084821/foxyfit.mp4'
+        mp4: 'https://files.catbox.moe/2sbbw8.mp4'
     },
     {
         title: 'CancerInc.mp4', 
