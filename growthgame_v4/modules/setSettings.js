@@ -328,7 +328,7 @@ function loadGame(){
         ownership.setAllOwnership(youroptions.find(arg => arg.option === 'ownership').value);
     };
 
-    document.querySelector('#gif_setting').checked = youroptions.find(arg => arg.option === 'prefers_webm')?.value || true;
+    document.querySelector('#gif_setting').checked = youroptions.find(arg => arg.option === 'prefers_webm')?.value || false;
     
     livestreamoptions[0].value = youroptions.find(arg => arg.option === 'livestreamoptions_arms')?.value || 1;
     livestreamoptions[1].value = youroptions.find(arg => arg.option === 'livestreamoptions_back')?.value || 1;
