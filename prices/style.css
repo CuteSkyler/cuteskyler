@@ -140,7 +140,7 @@ div#sheet div#imagea, div#sheet div#imageb{
     bottom: 0;
     z-index: 3;
     aspect-ratio: 3119/4062;
-    background-image: url('https://cdn.discordapp.com/attachments/717661956290510869/990026955086762034/761s.png');
+    background-image: url('https://files.catbox.moe/dufenq.png');
     background-size: contain;
     filter: drop-shadow(-12px -12px 12px rgba(0,0,0,0.25));
 }
@@ -150,7 +150,7 @@ div#sheet div#imageb{
     bottom: 0;
     right: 0;
     aspect-ratio: 1500/2200;
-    background-image: url('https://cdn.discordapp.com/attachments/717661956290510869/990235737733607475/750s.png');
+    background-image: url('https://files.catbox.moe/aqg3c8.png');
 }
 
 div#sheet .title::before, div#sheet .title::after{
