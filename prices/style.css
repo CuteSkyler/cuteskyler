@@ -183,40 +183,44 @@ div#sheet .title::after{
 }
 
 div#sheet *[data-drawings]::before{
-    --bg: url('https://cdn.discordapp.com/attachments/556796995088547851/922425315844816906/unknown.png');
+    aspect-ratio: 1/1;
+    --bg: url('https://files.catbox.moe/wwhyq4.jpeg');
 }
 
 div#sheet *[data-drawings]::after{
-    aspect-ratio: 2393/1797;
-    --bg: url('https://cdn.discordapp.com/attachments/556796995088547851/889641760043708417/20210921_000039.jpg');
+    aspect-ratio: 360/572;
+    --bg: url('https://files.catbox.moe/hyi1am.jpeg');
 }
 
 div#sheet *[data-renders]::before{
-    --bg: url('https://cdn.discordapp.com/attachments/556797084674555916/978064230571991060/747a1.png');
+    aspect-ratio: 1/1
+    --bg: url('https://files.catbox.moe/2bm2f4.jpeg');
 }
 
 div#sheet *[data-renders]::after{
-    aspect-ratio: 9/16;
-    --bg: url('https://cdn.discordapp.com/attachments/556797084674555916/946868729579450388/710a.png');
+    aspect-ratio: 1/1;
+    --bg: url('https://files.catbox.moe/1xx1vs.jpeg');
 }
 
 div#sheet *[data-animation]::before{
-    aspect-ratio: 16/9;
-    --bg: url('https://cdn.discordapp.com/attachments/556797230724415498/818599080259092540/530wipA.gif');
+    aspect-ratio: 1/1;
+    --bg: url('https://files.catbox.moe/c5y15z.gif');
 }
 
 div#sheet *[data-animation]::after{
-    --bg: url('https://cdn.discordapp.com/attachments/556797084674555916/990022018567139342/765a.gif');
+    aspect-ratio: 9/16;
+    background-size: contain;
+    --bg: url('https://files.catbox.moe/kup6sw.gif');
 }
 
 div#sheet *[data-character]::before{
     aspect-ratio: 16/9;
-    --bg: url('https://cdn.discordapp.com/attachments/556797084674555916/934182771579035689/JasmineRef.png');
+    --bg: url('https://files.catbox.moe/ctbgtk.png');
 }
 
 div#sheet *[data-character]::after{
     aspect-ratio: 9/16;
-    --bg: url('https://cdn.discordapp.com/attachments/556797230724415498/821541611108040744/unknown.png');
+    --bg: url('https://files.catbox.moe/lltlz9.jpeg');
 }
 
 div#sheet td:not([data-none]):hover, div#sheet th:not([data-none]):hover {
