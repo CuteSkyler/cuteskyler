@@ -379,9 +379,9 @@ function loadGame(){
     livestreamoptions[3].value = youroptions.find(arg => arg.option === 'livestreamoptions_legs')?.value || 1;
     livestreamoptions[4].value = youroptions.find(arg => arg.option === 'livestreamoptions_butt')?.value || 1;
     dayspassed = parseInt(youroptions.find(arg => arg.option === 'dayspassed')?.value) || 0;
-    bodybuilding_competed[0].fougt = youroptions.find(arg => arg.option === 'fbb_completed_jasmine')?.value || false;
-    bodybuilding_competed[1].fougt = youroptions.find(arg => arg.option === 'fbb_completed_nady')?.value || false;
-    bodybuilding_competed[2].fougt = youroptions.find(arg => arg.option === 'fbb_completed_foxy')?.value || false;
+    bodybuilding_competed[0].fought = youroptions.find(arg => arg.option === 'fbb_completed_jasmine')?.value || false;
+    bodybuilding_competed[1].fought = youroptions.find(arg => arg.option === 'fbb_completed_nady')?.value || false;
+    bodybuilding_competed[2].fought = youroptions.find(arg => arg.option === 'fbb_completed_foxy')?.value || false;
     multiplier = parseFloat(youroptions.find(arg => arg.option === 'the_multiplier')?.value) || 1;
     jobs_unlocked.lifeguard = youroptions.find(arg => arg.option === 'options_lifeguard_unlocked')?.value || "true";
     jobs_unlocked.bodybuilder = youroptions.find(arg => arg.option === 'options_bodybuilder_unlocked')?.value || "false";

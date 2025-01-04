@@ -45,7 +45,6 @@ let outside_2 = {
     ],
     functions: [
         (function(check){
-            if(money < 100) return 'Not available...';
             if(check) return;
             generatePrompt(
             junkie
@@ -97,7 +96,8 @@ let junkie = {
     ],
     functions: [
         (function(check){
-            if(check) return;
+            if(check) if(regimen.money >= 100) return; else return 'Not available...';
+            if(regimen.money <= 100) return;
             randomEncounter(
                 'junkie'
             )
