@@ -14,7 +14,7 @@ let fbb_jasmine = {
 };
 
 let fbb_jasmine2 = {
-    prompt: [ 'Jasmine', "Oh hey, I know you, big fan! You're Vanessa, right?", 'currentSize', 'gym-bg', "https://files.catbox.moe/c9tr0k.png"],
+    prompt: [ 'Jasmine', "Oh hey, I know you, big fan! You're Vanessa, right?", 'currentSize', 'gym-bg', "https://files.catbox.moe/btwy7f.gif"],
     options: [
         'You respond...'
     ],
@@ -44,7 +44,7 @@ let fbb_jasmine3 = {
 };
 
 let fbb_jasmine4 = {
-    prompt: [ 'Jasmine', "Of course I know you, you're a big inspiration! You're the reason I got so big! Pretty amazing to see myself competing against the one and only.", 'currentSize', 'gym-bg', "https://files.catbox.moe/c9tr0k.png"],
+    prompt: [ 'Jasmine', "Of course I know you, you're a big inspiration! You're the reason I got so big! Pretty amazing to see myself competing against the one and only.", 'currentSize', 'gym-bg', "https://files.catbox.moe/btwy7f.gif"],
     options: [
         'Next...'
     ],
@@ -74,7 +74,7 @@ let fbb_jasmine5 = {
 };
 
 let fbb_jasmine6 = {
-    prompt: [ 'Jasmine', "You betcha, see you on the podium!", 'currentSize', 'gym-bg', "https://files.catbox.moe/c9tr0k.png"],
+    prompt: [ 'Jasmine', "You betcha, see you on the podium!", 'currentSize', 'gym-bg', "https://files.catbox.moe/btwy7f.gif"],
     options: [
         'Next...'
     ],
@@ -128,7 +128,7 @@ let fbb_jasmine_fail = {
 };
 
 let fbb_jasmine_fail2 = {
-    prompt: [ 'Jasmine', "Hey, no need to worry, I don't gain muscle mass nearly as fast as you do, just try again next week and let's see who wins then! I'm sure you'll definitely win then!", 'currentSize', 'gym-bg', "https://files.catbox.moe/c9tr0k.png"],
+    prompt: [ 'Jasmine', "Hey, no need to worry, I don't gain muscle mass nearly as fast as you do, just try again next week and let's see who wins then! I'm sure you'll definitely win then!", 'currentSize', 'gym-bg', "https://files.catbox.moe/btwy7f.gif"],
     options: [
         'Leave...'
     ],
@@ -160,7 +160,7 @@ let fbb_jasmine_win = {
 };
 
 let fbb_jasmine_win2 = {
-    prompt: [ 'Jasmine', "There was not really a competition with your massive stature compared to mine, haha! Means I still have to hit the weights, clearly! But let's hope to see you get larger as well, see ya!", 'currentSize', 'gym-bg', "https://files.catbox.moe/c9tr0k.png"],
+    prompt: [ 'Jasmine', "There was not really a competition with your massive stature compared to mine, haha! Means I still have to hit the weights, clearly! But let's hope to see you get larger as well, see ya!", 'currentSize', 'gym-bg', "https://files.catbox.moe/btwy7f.gif"],
     options: [
         'Leave...'
     ],
