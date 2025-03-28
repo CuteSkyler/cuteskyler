@@ -8,6 +8,11 @@ let purchasedAmounts = {
     steroids: 0
 }
 
+setInterval(()=>{
+    saveGame();
+}, 1000*60*5); // 5 Minutes
+// }, 1000*5); // 5 seconds
+
 const stagelinks = {
     "Vanessa": [
         "https://files.catbox.moe/65eyb3.webm",

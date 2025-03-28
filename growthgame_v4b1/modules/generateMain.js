@@ -84,15 +84,19 @@ function generatePrompt(
         let options = document.createElement('div');
         options.id = 'options'
         let option1 = document.createElement('div');
+        options.tabIndex = '-1';
         option1.classList.add('option');
         option1.id = 'optionA';
         let option2 = document.createElement('div');
+        options.tabIndex = '-1';
         option2.classList.add('option');
         option2.id = 'optionB';
         let option3 = document.createElement('div');
+        options.tabIndex = '-1';
         option3.classList.add('option');
         option3.id = 'optionC';
         let option4 = document.createElement('div');
+        options.tabIndex = '-1';
         option4.classList.add('option');
         option4.id = 'optionD';
 

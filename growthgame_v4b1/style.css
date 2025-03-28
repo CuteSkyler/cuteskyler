@@ -27,6 +27,7 @@
     --alpha-bg: url('./renders/alpha.png');
     --beta-bg: url('./renders/beta.png');
     --beta-b1-bg: url('./renders/beta_b1.jpeg');
+    --beta-b2-bg: url('./renders/beta_b2.jpeg');
     --small-store-bg: url('./renders/background/store.png');
     --store-bg: url('./renders/background/mall.png');
     --alley-bg: url('./renders/background/alley.png');
@@ -97,7 +98,7 @@ main{
         transition: none;
     }
     
-    #prompt > #options > *:hover{
+    #prompt > #options > *:hover, #prompt > #options > *:focus{
         background-color: rgba(100,100,100,1);
         padding-inline: 1rem !important;
     }
@@ -105,6 +106,32 @@ main{
     #prompt > #options > *:active{
         background-color: rgba(75,75,75,1);
         padding-inline: 1rem !important;
+    }
+
+    footer {
+        /* padding: var(--header-padding); */
+        background-color: var(--accent-colour);
+        position: relative;
+    }
+
+    footer > div {
+        position: relative;
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    footer > div > * {
+        line-height: 0;
+        height: 100%;
+        padding-block: calc(var(--header-padding)/2);
+        padding-inline: 1rem;
+        border: none;
+        outline: none;
+        background-color: rgba(0, 0, 0, 0.1);
+        color: white;
+        flex-grow: 1;
     }
 }
 
@@ -220,11 +247,13 @@ footer{
     /* padding: var(--header-padding); */
     background-color: var(--accent-colour);
     position: relative;
+    overflow: hidden;
 }
 
 footer > div{
     position: relative;
     display: flex;
+    flex-flow: row wrap;
     gap: 1rem;
     width: 100%;
     height: 100%;
@@ -239,6 +268,17 @@ footer > div > *{
     outline: none;
     background-color: rgba(0,0,0,0.1);
     color: white;
+    flex-grow: 1;
+}
+
+#hint{
+    opacity: 0.65;
+    flex-grow: 0;
+    flex-shrink: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header > div{
@@ -416,14 +456,16 @@ main > *:nth-child(2){
 
 #prompt > #options > *{
     border-radius: 1rem;
+    position: relative;
     background-color: gray;
     padding: 1rem;
     max-width: 75%;
     font-size: calc(var(--scale-factor)*2rem);
     transition: padding-inline ease-in-out 100ms;
+    display: flex;
 }
 
-#prompt > #options > *:hover{
+#prompt > #options > *:hover, #prompt > #options > *:focus{
     padding-inline: 4rem;
 }
 
@@ -463,7 +505,8 @@ button#showmenu{
     top: calc(var(--header-size) + 1rem);
     left: 0;
 
-    width: min(6vw,64px);
+    /* width: min(6vw,64px); */
+    width: 64px;
     aspect-ratio: 1/1;
     padding: 1rem;
     margin: 1rem;
@@ -569,7 +612,6 @@ button#showmenu.active > *::before{
 #options .option[value='Not Availble...']{
     color: gray;
 }
-
 
 /* ACHIVEMENT */
 
@@ -716,7 +758,7 @@ h3{
     transition: font-size 50ms ease-in-out;
 }
 
-#optionaire > *[type="submit"]:hover{
+#optionaire > *[type="submit"]:hover, #optionaire > *[type="submit"]:focus{
     font-weight: 100;
     font-size: 1.2rem;
 }
@@ -910,7 +952,7 @@ input#cheatcode{
     border-radius: inherit;
     background-color: rgba(0,0,0,0.4);
 }
-#cheatcode > button#submit:hover::before{
+#cheatcode > button#submit:hover::before,#cheatcode > button#submit:focus::before{
     background-color: rgba(0,0,0,0.6);
 }
 #cheatcode > button#submit:active::before{

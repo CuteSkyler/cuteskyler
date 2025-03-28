@@ -1,14 +1,17 @@
-let SuperSecretKey = 'skyler'
+const SuperSecretKey = 'monster';
 
 let firstprompt = {
-    prompt: [ '', 'Welcome to Growth Game v4b1 closed beta!', 'currentSize', 'beta-b1-bg', './renders/beta_b1.jpeg'],
+    prompt: [ '', 'Welcome to Growth Game v4b2 closed beta!', 'currentSize', 'beta-b2-bg', './renders/beta_b2.jpeg'],
     options: [
         'Load game...'
     ],
     functions: [
         (function(check){
             if(check) return;
-            if(document.querySelector('#passcode').value.toLocaleLowerCase() !== SuperSecretKey) return;
+            if(document.querySelector('#passcode').value.toLocaleLowerCase() !== SuperSecretKey){
+                alert('Incorrect.');
+                return;
+            };
             loadGame();
             document.querySelector('#showmenu').style.display = 'block';
             generatePrompt(menu);
@@ -17,6 +20,53 @@ let firstprompt = {
     ],
     added: [0,0,0,0,0]
 };
+
+let currently_focussed = 0;
+
+window.onkeydown = (e)=>{
+    if(!e) e = window.event;
+    switch(e.key){
+        case "Tab":{
+            currently_focussed += 1;
+            if(currently_focussed >= document.querySelector('#options').children.length) currently_focussed = 0;
+            console.log(currently_focussed, document.querySelector('#options').children[0]);
+            document.querySelector('#options').children[currently_focussed].focus();
+            break;
+        };
+        case "Enter":{
+            currently_focussed = 0;
+            document.querySelector('#options').children[currently_focussed].click();
+            break;
+        };
+        case "1":{
+            currently_focussed = 0;
+            document.querySelector('#options').children[currently_focussed].click();
+            break;
+        };
+        case "2":{
+            currently_focussed = 1;
+            if(document.querySelector('#options').children.length < 2) currently_focussed = 0;
+            document.querySelector('#options').children[currently_focussed].click();
+            break;
+        };
+        case "3":{
+            currently_focussed = 2;
+            if(document.querySelector('#options').children.length < 3) currently_focussed = document.querySelector('#options').children.length - 1;
+            document.querySelector('#options').children[currently_focussed].click();
+            break;
+        };
+        case "4":{
+            currently_focussed = 3;
+            if(document.querySelector('#options').children.length < 4) currently_focussed = document.querySelector('#options').children.length - 1;
+            document.querySelector('#options').children[currently_focussed].click();
+            break;
+        };
+        default:{
+            return;
+        };
+    };
+};
+
 
 generatePrompt(
     firstprompt
