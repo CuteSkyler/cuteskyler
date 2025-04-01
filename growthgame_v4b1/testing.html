@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+</head>
+<body>
+    <div id="facts">
+        <p id="number">0</p>
+        <p id="rep">0</p>
+        <p id="level">0</p>
+    </div>
+
+    <div id="show">
+        <div id="show2"></div>
+    </div>
+
+    <div id="clicky"></div>
+
+    <div id="effect">+1 kg</div>
+
+    <select id="difficult" onchange="changeDifficulity()">
+        <option selected>Easy</option>
+        <option>Normal</option>
+        <option>Difficult</option>
+    </select>
+</body>
+<style>
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    div#clicky{
+        width: 128px;
+        height: 128px;
+        background: transparent;
+        outline: 1px solid red;
+    }
+
+    div#facts{
+        display: flex;
+    }
+
+    div#facts > *{
+        flex-grow: 1;
+    }
+
+    #show{
+        position: relative;
+        height: 300px;
+        aspect-ratio: 16/9;
+        background-image: url('./testing/output_frame0001.png');
+        background-size: contain;
+        background-position: center;
+    }
+    #show2{
+        position: absolute;
+        height: 100%;
+        aspect-ratio: inherit;
+        background-image: url('./testing/output_frame0002.png');
+        /* background-color: red; */
+        background-size: inherit;
+        background-position: inherit;
+        z-index: -1;
+    }
+    #effect{
+        position: fixed;
+        opacity: 0;
+    }
+
+    @keyframes ass{
+        0%{
+            opacity: 1;
+        }
+        100%{
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+    }
+</style>
+<script>
+
+    let settings = {
+        num: 0,
+        rep: 0,
+        temp_block: false,
+        amount_of_frames: 60
+    };
+    const number = document.querySelector('p#number');
+    const level = document.querySelector('p#level');
+    const reps = document.querySelector('p#rep');
+    const click = document.querySelector('div#clicky');
+    const show = document.querySelector('div#show');
+    const show2 = document.querySelector('div#show2');
+    const effect = document.querySelector('div#effect');
+    const difficult = document.querySelector('select#difficult');
+
+    function changeNumber(amount){
+        settings.num += amount;
+        number.innerHTML = settings.num;
+        effect.style.animation = `ass 1s ease-in-out forwards`;
+        setTimeout(()=>{effect.style.animation = ''}, 1000);
+    };
+
+    function changeReps(amount){
+        if(settings.temp_block == true && settings.rep == 0) settings.temp_block = false;
+        if(settings.temp_block == true && amount > 0) return;
+        if(settings.rep + amount <= 0) settings.rep = 0;
+        else settings.rep += amount;
+        settings.rep = Math.floor(settings.rep*100)/100;
+        reps.innerHTML = settings.rep;
+        if(settings.rep >= 10 && settings.temp_block == false){
+            settings.temp_block = true;
+            changeNumber(1);
+        };
+        return;
+    };
+
+    let division = Math.floor(50*(1/(settings.num+1)));
+    let timing = (1/division)*1000;
+    const difficulities = {
+        easy: 25,
+        normal: 50,
+        difficult: 100
+    }
+    let difficulity = 'easy';
+    let muscleamount = Math.floor(Math.random()*5400);
+    let addative = muscleamount * difficulities[difficulity]/100;
+    effect.innerHTML = `+${addative}kg`;
+
+    function frameLoop(){
+        if(settings.temp_block == true){
+            division = 60;
+            timing = (1/division)*1000;
+        }else{
+            division = Math.floor(difficulities[difficulity]*((settings.num)/50+1));
+            timing = (1/division)*1000;
+        }
+        if(settings.rep == 0) return;
+        changeReps(-0.1);
+        console.log(`${Math.floor(settings.rep*10)/10}`);
+        addative = muscleamount * difficulities[difficulity]/100;
+        effect.innerHTML = `+${addative}kg`;
+        difficulity = difficult.value.toLocaleLowerCase();
+        level.innerHTML = `${settings.num+1}, ${(1/division)*1000}`;
+        const query = Math.floor(Math.floor(settings.rep*10)/100*settings.amount_of_frames);
+        show.style.backgroundImage = `url('./testing/output_frame00${query < 10?'0':''}${query==0?'1':query}.png')`;
+        show2.style.backgroundImage = `url('./testing/output_frame00${query-2 < 10?'0':''}${query-2==0?'1':query-2}.png')`;
+        clicky.style.background = `linear-gradient(0deg, red ${(settings.rep/10)*100}%, transparent ${(settings.rep/10)*100}%)`;
+        return;
+    };
+
+    window.addEventListener('mousemove', (e)=>{
+        console.log(e.clientX, e.clientY);
+        effect.style.top = `${e.clientY+10}px`;
+        effect.style.left = `${e.clientX+10}px`;
+    });
+
+    function loop(){
+        console.log(timing, division);
+        frameLoop();
+        setTimeout(loop, timing);
+    };
+    loop();
+
+    click.addEventListener('click', (e)=>{
+        e.preventDefault();
+        changeReps(1);
+        return;
+    });
+</script>
+</html>

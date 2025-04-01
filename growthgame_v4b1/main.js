@@ -33,6 +33,10 @@ window.onkeydown = (e)=>{
             document.querySelector('#options').children[currently_focussed].focus();
             break;
         };
+        case " ":{
+            clickEvent();
+            break;
+        }
         case "Enter":{
             currently_focussed = 0;
             document.querySelector('#options').children[currently_focussed].click();

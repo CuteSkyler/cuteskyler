@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cuteskyler.art | Growthgame v4 | PUBLIC BUILD</title>
+
+    <meta name="description" content="CUTESKYLER.ART | Find content related to CuteSkyler all in one place!">
+    <meta property="og:image" content="https://cuteskyler.art/growthgame_v4b1/renders/beta_b2.jpeg">
+    <meta property="og:description" content="CUTESKYLER.ART | Find content related to CuteSkyler all in one place!">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="@CuteSkyler">
+    <meta property="twitter:site:id" content="@CuteSkyler">
+    <meta property="twitter:creator" content="@CuteSkyler">
+    <meta property="twitter:creator:id" content="@CuteSkyler">
+    <meta property="og:title" content="Growthgame | cuteskyler.art">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cuteskyler.art/">
+    <meta data-react-helmet="true" property="og:image" content="https://cuteskyler.art/growthgame_v4b1/renders/beta_b2.jpeg">
+    <meta data-react-helmet="true" property="twitter:image" content="https://cuteskyler.art/growthgame_v4b1/renders/beta_b2.jpeg">
+</head>
+<body></body>
+<script>
+    let randomiser = Math.floor(Math.random()*2);
+    let video = document.createElement('video');
+    let src = '';
+    function makeVideo(url, silly){
+        video = document.createElement('video');
+        video.src = url;
+        video.autoplay = 'true';
+        video.loop = 'true';
+        document.body.append(video);
+        if(silly){
+            video.classList.add('silly');
+            video.style.top = silly.y;
+            video.style.left = silly.x;
+        }
+        return;
+    };
+
+    const ass = {1: ['50vw', '50vh'], 2: ['0vw', '0vh']}
+
+    for(let x = 1; x < 15; x++){
+        if(randomiser < 1) src = './april_fools_.mp4';
+        else src = './Ricky.mp4';
+        makeVideo(src, x>10?{x: x<13?'0vw':'50vw', y: x%2==0?'0vh':'50vh'}:false);
+    };
+</script>
+<style>
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        max-width: 100vw;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    video{
+        width: 50vw;
+    }
+    video.silly{
+        position: fixed;
+        width: 50vw;
+        animation: spinny 10s ease-in-out infinite alternate;
+    }
+    @keyframes spinny {
+        from{
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+        }
+        to{
+            transform: rotateX(3600deg) rotateY(1320deg) rotateZ(4430deg)
+        }
+    }
+</style>
+</html>

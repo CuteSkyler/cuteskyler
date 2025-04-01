@@ -732,3 +732,146 @@ let regularDrugsTrade = {
     ],
     added: [0,0,-10,-1000,0]
 };
+
+
+
+let in_mini_game = false;
+
+let minigamesettings = {
+    num: 0,
+    rep: 0,
+    temp_block: false,
+    amount_of_frames: 60
+};
+
+let click = document.querySelector('div#clicky');
+let show = document.querySelector('div#upper > img');
+let show2 = document.querySelector('div#upper > .bg');
+let effect = document.querySelector('div#effect');
+
+function setupMinigame(){
+    show = document.querySelector('div#upper > img');
+    show2 = document.querySelector('div#upper > .bg');
+    show.src = './testing/output_frame0001.png';
+    show2.style.backgroundImage = 'var(--gym-bg)';
+    let clicky = document.createElement('div');
+    let selection = document.createElement('select');
+    let option = document.createElement('option');
+    Object.keys(difficulities).forEach(value =>{
+        option = document.createElement('option');
+        option.value = value;
+        option.innerHTML = value;
+        selection.append(option);
+    });
+    selection.id = 'difficult';
+    clicky.id = 'clicky';
+    document.querySelector('#story').innerHTML = '';
+    document.querySelector('div#options').innerHTML = '';
+    document.querySelector('#story').append(clicky);
+    document.querySelector('#options').append(selection);
+    click = document.querySelector('div#clicky');
+    show = document.querySelector('div#upper > img');
+    show2 = document.querySelector('div#upper > .bg');
+    effect = document.querySelector('div#effect');
+    difficult = document.querySelector('select#difficult');
+
+    let returning = document.createElement('div');
+    returning.id = 'optionA';
+    returning.innerHTML = 'Return...';
+    returning.addEventListener('click', (e)=>{
+        e.preventDefault();
+        generatePrompt(menu);
+        return;
+    });
+    document.querySelector('div#options').append(returning);
+
+    click.addEventListener('click', (e)=>{
+        e.preventDefault();
+        clickEvent();
+    });
+
+    in_mini_game = true;
+    loop();
+}
+
+function clickEvent(){
+    if(!in_mini_game) return;
+    changeReps(1);
+    return;
+}
+
+function changeNumber(amount){
+    if(!in_mini_game) return;
+    addDetails([Math.ceil(addative * temporary_boosts.muscle), 0, 0, 0, 0], true);
+    minigamesettings.num += amount;
+    effect.style.animation = `ass 1s ease-in-out forwards`;
+    setTimeout(()=>{effect.style.animation = ''}, 1000);
+};
+
+function changeReps(amount){
+    if(!in_mini_game) return;
+    if(minigamesettings.temp_block == true && minigamesettings.rep == 0) minigamesettings.temp_block = false;
+    if(minigamesettings.temp_block == true && amount > 0) return;
+    if(minigamesettings.rep + amount <= 0) minigamesettings.rep = 0;
+    else minigamesettings.rep += amount;
+    minigamesettings.rep = Math.floor(minigamesettings.rep*100)/100;
+    if(minigamesettings.rep >= 10 && minigamesettings.temp_block == false){
+        minigamesettings.temp_block = true;
+        changeNumber(1);
+    };
+    return;
+};
+
+let division = Math.floor(50*(1/(minigamesettings.num+1)));
+let timing = (1/division)*1000;
+let total_amount_of_reps = 0;
+const difficulities = {
+    'Easy': 12.5,
+    'Normal': 25,
+    'Difficult': 50,
+    'Really Difficult': 100,
+    'Extremely Difficult': 200,
+    'Excessively Difficult': 400,
+    'Vanessas Difficulity': 800
+};
+let addative = 0;
+effect.innerHTML = `+${addative}kg`;
+
+let difficult = document.querySelector('select#difficult');
+function frameLoop(){
+    if(!in_mini_game) return;
+    if(minigamesettings.temp_block == true){
+        division = 60;
+        timing = (1/division)*1000;
+    }else{
+        division = Math.floor(difficulities[difficult.value]*((minigamesettings.num)/50+1));
+        timing = (1/division)*1000;
+    }
+    if(minigamesettings.rep == 0) return;
+    changeReps(-0.1);
+
+    let progress = document.querySelector('#progress');
+    progress.dataset['progress'] = `${(regimen.muscle-Math.pow(10,(regimen.stage+1)))/(Math.pow(10,(regimen.stage+2)))*1000/10}%`;
+    progress.style.setProperty('--progress', (regimen.muscle-Math.pow(10,(regimen.stage+1)))/(Math.pow(10,(regimen.stage+2)))*1000/10);
+    
+    addative = Math.ceil(((regimen.muscle * difficulities[difficult.value]/100)*multiplier)/10);
+    effect.innerHTML = `+${addative}kg`;
+    query = Math.floor(Math.floor(minigamesettings.rep*10)/100*minigamesettings.amount_of_frames);
+    
+    if(query > minigamesettings.amount_of_frames) query = minigamesettings.amount_of_frames;
+    show.src = `./testing/output_frame00${query < 10?'0':''}${query==0?'1':query}.png`;
+    click.style.background = `linear-gradient(0deg, ${theoptions.accent_colour} ${(minigamesettings.rep/10)*100}%, transparent ${(minigamesettings.rep/10)*100}%)`;
+    return;
+};
+
+window.addEventListener('mousemove', (e)=>{
+    if(!in_mini_game) return;
+    effect.style.top = `${e.clientY+10}px`;
+    effect.style.left = `${e.clientX+10}px`;
+});
+
+function loop(){
+    if(!in_mini_game) return;
+    frameLoop();
+    setTimeout(loop, timing);
+};
