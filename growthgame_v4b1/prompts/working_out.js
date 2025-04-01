@@ -52,9 +52,10 @@ let work_out2 = {
         (function(check){
             if(check) if(ownership.checkOwned('heavyweights')) return false; else return 'Not available...';
             if(ownership.checkOwned('heavyweights'))
-            generatePrompt(
-                heavyweights
-            )
+            setupMinigame();
+            // generatePrompt(
+            //     heavyweights
+            // )
         }),
         (function(check){
             if(check) if(ownership.checkOwned('giganticdumbbells')) return false; else return 'Not available...';

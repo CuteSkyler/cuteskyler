@@ -847,9 +847,6 @@ h3{
     left: -100%;
 }
 
-
-
-
 h1{
     animation: fade-in-fade-out 10s linear infinite;
 }
@@ -915,10 +912,6 @@ h4{
     2%{background: red;}
     100%{background: rgba(0,0,0,0.5);}
 }
-
-/* form#cheatcode, form#cheatcode *{
-    outline: 1px solid red;
-} */
 
 form#cheatcode{
     border-radius: 1rem;
@@ -991,28 +984,26 @@ div#clicky{
     border-radius: 1rem;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: calc(2rem*var(--scale-factor));
 }
 div#clicky::before{
+    text-align: center;
     content: 'Click here!';
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: fit-content;
+    position: relative;
     line-height: 0;
     z-index: -1;
     color: var(--accent-colour);
 }
 div#clicky::after{
+    text-align: center;
     content: '(Or press (and hold) Space)';
     font-size: 1rem;
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: fit-content;
+    position: relative;
     line-height: 0;
     z-index: -1;
     color: var(--accent-colour);

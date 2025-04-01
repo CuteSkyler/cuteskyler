@@ -9,7 +9,8 @@ let achievements = [
     {id: 7, name: "Fox of the... beach?", description: "You met Foxy on the beach!", image: 'https://icons.iconarchive.com/icons/google/noto-emoji-animals-nature/1024/22218-fox-face-icon.png', rare: true, gotten: false},
     {id: 8, name: "A $3,153 Box Office", description: "You met the fanatic at the gym", image: 'https://upload.wikimedia.org/wikipedia/en/4/41/The_Fanatic_-_release_poster.jpg', rare: true, gotten: false},
     {id: 9, name: "Who ya gonna call?", description: "You discovered the cheatcode for Nady!", image: 'https://icons.iconarchive.com/icons/google/noto-emoji-animals-nature/1024/22218-fox-face-icon.png', rare: true, gotten: false},
-    {id: 10, name: "You wouldn't steal a car.", description: "Activated a naughty cheat.", image: 'https://img.icons8.com/emoji/452/pirate-flag.png', rare: false, gotten: false}
+    {id: 10, name: "You wouldn't steal a car.", description: "Activated a naughty cheat.", image: 'https://img.icons8.com/emoji/452/pirate-flag.png', rare: false, gotten: false},
+    {id: 11, name: "A heavy weight champion", description: "Reached the maximum amount of weight to lift.", image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fattic.sh%2Fjulq8m6b9fnelh9t0ed8uunm1ozd&f=1&nofb=1&ipt=8b761c12ea100a9a99628b69616eef425c118240f92b07b4b5798747df05c594&ipo=images', rare: true, gotten: false}
 ]
 let too_tired = {
     prompt: [ '', `Vanessa is feeling way too tired to do anything anymore for the day, let's sleep it out for now...`, '', 'bedroom-bg', 'https://media0.giphy.com/media/mwv5LrIc9MqY0ZXtIk/giphy.gif?cid=6c09b952qajz20zwsuxno121nbkaqpue38wc4obkcdewm7t7&ep=v1_stickers_related&rid=giphy.gif&ct=ts'],
@@ -735,8 +736,10 @@ let regularDrugsTrade = {
 
 
 
-let in_mini_game = false;
 
+
+
+let in_mini_game = false;
 let minigamesettings = {
     num: 0,
     rep: 0,
@@ -761,6 +764,7 @@ function setupMinigame(){
         option = document.createElement('option');
         option.value = value;
         option.innerHTML = value;
+        if(value !== 'Easy') option.disabled = 'true';
         selection.append(option);
     });
     selection.id = 'difficult';
@@ -804,6 +808,7 @@ function changeNumber(amount){
     if(!in_mini_game) return;
     addDetails([Math.ceil(addative * temporary_boosts.muscle), 0, 0, 0, 0], true);
     minigamesettings.num += amount;
+    total_amount_of_nums += amount;
     effect.style.animation = `ass 1s ease-in-out forwards`;
     setTimeout(()=>{effect.style.animation = ''}, 1000);
 };
@@ -818,13 +823,14 @@ function changeReps(amount){
     if(minigamesettings.rep >= 10 && minigamesettings.temp_block == false){
         minigamesettings.temp_block = true;
         changeNumber(1);
+        addDetails([0,0,0,0,1]);
     };
     return;
 };
 
 let division = Math.floor(50*(1/(minigamesettings.num+1)));
 let timing = (1/division)*1000;
-let total_amount_of_reps = 0;
+let total_amount_of_nums = 0;
 const difficulities = {
     'Easy': 12.5,
     'Normal': 25,
@@ -838,7 +844,9 @@ let addative = 0;
 effect.innerHTML = `+${addative}kg`;
 
 let difficult = document.querySelector('select#difficult');
+minigamesettings.num = total_amount_of_nums;
 function frameLoop(){
+    openSettings(total_amount_of_nums);
     if(!in_mini_game) return;
     if(minigamesettings.temp_block == true){
         division = 60;
@@ -861,6 +869,29 @@ function frameLoop(){
     if(query > minigamesettings.amount_of_frames) query = minigamesettings.amount_of_frames;
     show.src = `./testing/output_frame00${query < 10?'0':''}${query==0?'1':query}.png`;
     click.style.background = `linear-gradient(0deg, ${theoptions.accent_colour} ${(minigamesettings.rep/10)*100}%, transparent ${(minigamesettings.rep/10)*100}%)`;
+    return;
+};
+
+function openSettings(setting){
+    if (setting >= 100) {
+        document.querySelector(`select#difficult > option:nth-child(${1 + 1})`).disabled = false;
+    }
+    if (setting >= 250) {
+        document.querySelector(`select#difficult > option:nth-child(${2 + 1})`).disabled = false;
+    }
+    if (setting >= 500) {
+        document.querySelector(`select#difficult > option:nth-child(${3 + 1})`).disabled = false;
+    }
+    if (setting >= 1000) {
+        document.querySelector(`select#difficult > option:nth-child(${4 + 1})`).disabled = false;
+    }
+    if (setting >= 2000) {
+        document.querySelector(`select#difficult > option:nth-child(${5 + 1})`).disabled = false;
+    }
+    if (setting >= 4000) {
+        generateAchievement(11);
+        document.querySelector(`select#difficult > option:nth-child(${6 + 1})`).disabled = false;
+    }
     return;
 };
 

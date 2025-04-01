@@ -108,8 +108,8 @@ function addDetails([muscle, height, intelligence, money, energy], check){
 
 document.querySelector('form#cheatcode button#submit').addEventListener('click', e=>{
     e.preventDefault();
-    switch(document.querySelector('input#cheatcode').value.toLocaleLowerCase()){
-        case 'thegreenvixen': {
+    switch(btoa(document.querySelector('input#cheatcode').value.toLocaleLowerCase())){
+        case 'dGhlZ3JlZW5maXhlbg==': {
             alert("Nady character unlocked!");
             let Nady = document.createElement('option');
             Nady.innerHTML = 'Nady';
@@ -117,37 +117,43 @@ document.querySelector('form#cheatcode button#submit').addEventListener('click',
             break;
         };
 
-        case 'buffmeup': {
+        case 'YnVmZm1ldXA=': {
             alert(`Added ${Math.floor(goal/1000)}kg of muscle!`);
             addDetails([Math.floor(goal/1000),0,0,0,0]);
             generateAchievement(10);
             break;
         };
-        case 'largerlegs': {
+        case 'bGFyZ2VybGVncw==': {
             let added = 200;
             alert(`Added ${Math.floor(added/100)}.00m of length!`);
             addDetails([0,added,0,0,0]);
             generateAchievement(10);
             break;
         };
-        case 'standarddeviation': {
+        case 'c3RhbmRhcmRkZXZpYXRpb24=': {
             let added = 25;
             alert(`Added ${added}iq of intelligence points!`);
             addDetails([0,0,added,0,0]);
             generateAchievement(10);
             break;
         };
-        case 'motherlode': {
+        case 'bW90aGVybG9kZQ==': {
             let added = 10000;
             alert(`Added ${added}$!`);
             addDetails([0,0,0,added,0]);
             generateAchievement(10);
             break;
         };
-        case 'fivehourenergy': {
+        case 'Zml2ZWhvdXJlbmVyZ3k=': {
             let added = 10000;
             alert(`Added ${added}$!`);
             addDetails([0,0,0,0,10000]);
+            generateAchievement(10);
+            break;
+        };
+        case 'dGhlcHVtcGlzcmVhbA==': {
+            total_amount_of_nums = 100000;
+            alert(`Unlocked all the weight classes!`);
             generateAchievement(10);
             break;
         };
@@ -158,7 +164,7 @@ document.querySelector('form#cheatcode button#submit').addEventListener('click',
         //     document.querySelector('select#character').append(Jasmine);
         //     break;
         // }
-        case 'idontwannaplay': {
+        case 'aWRvbnR3YW5uYXBsYXk=': {
             alert("Welcome to the debug room");
             generatePrompt(debug_room1);
             generateAchievement(10);
@@ -335,6 +341,7 @@ function saveGame(){
     document.cookie = `regimen_energy=${regimen.energy}`;
     document.cookie = `goalamount=${goal}`;
     document.cookie = `regimen_stage=${regimen.stage}`;
+    document.cookie = `total_number_of_num=${total_amount_of_nums}`;
 
     document.cookie = `lifeguard_unlocked=${jobs_unlocked.lifeguard}`;
     document.cookie = `bodybuilder_unlocked=${jobs_unlocked.bodybuilder}`;
@@ -411,6 +418,8 @@ function loadGame(){
     regimen.stage = parseInt(__stage__);
     let __goal__ = youroptions.find(arg => arg.option === 'goalamount')?.value || 1000;
     goal = parseInt(__goal__);
+    let __nums__ = youroptions.find(arg => arg.option === 'total_number_of_nums')?.value || 0;
+    total_amount_of_nums = __nums__;
 
     document.querySelector('input#blur').value = theoptions.blur_amount;
     document.querySelector('input#accent_colour').value = theoptions.accent_colour;
