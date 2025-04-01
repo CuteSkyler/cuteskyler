@@ -27,14 +27,16 @@
     function makeVideo(url, silly){
         video = document.createElement('video');
         video.src = url;
-        video.autoplay = 'true';
         video.loop = 'true';
-        document.body.append(video);
         if(silly){
             video.classList.add('silly');
             video.style.top = silly.y;
             video.style.left = silly.x;
-        }
+        };
+        video.play().catch(err=>{
+            window.location.href = 'https://youtu.be/E9de-cmycx8';
+        });
+        document.body.append(video);
         return;
     };
 
